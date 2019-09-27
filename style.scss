@@ -1,0 +1,10 @@
+$color:blue;
+$listas:list-style-type:none;
+    
+    body{
+        background-color: $color;
+        }
+
+    nav ul li{
+        list-style-type: $none;
+    }

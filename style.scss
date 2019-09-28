@@ -1,11 +1,119 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-$color:blue;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
-    body{
-        background-color: $color;
-        font-family: 'Montserrat', sans-serif;
-        }
+$color1:#004A99;
+$color2: #fff;
+$color3: #00458f;
+$color4: #BFDDFE;
+$letraPar: 15px;
+$letraH3: 36px;
+$letraH5: 22px;
+$marginSmall: 0.5em;
+$marginMedium: 1em;
+$fontCard: 'Open Sans', sans-serif;
 
-    nav ul li{
-        list-style-type: none;
+body{
+    background-color: $color1;
+    font-family: 'Montserrat', sans-serif;
+    padding:0;
+    margin:0; 
     }
+
+nav ul li{
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------
+S                            ECCIÓN WHY CHOOSE US
+-------------------------------------------------------------------------*/
+.whyUs {
+    background-color: $color1;
+    color: $color2;
+    text-align: center;
+        h3 {
+            font-size: $letraH3;
+        }
+        .top {
+            font-size: $letraPar;
+            padding-left: 30%;
+            padding-right: 30%;
+        }
+     
+    section {
+        padding: 35px 12%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        .card {
+            width: 300px;
+            height: 280px;
+            border-radius: 5%;
+            background-color: $color3;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 35px 25px 15px;
+            display: flex;
+            flex-direction: column;
+            font-family: $fontCard;
+                                   
+            i {
+                color: $color4;
+                font-size: 48px;                
+            }
+            .body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                h5 {
+                    font-size: $letraH5;
+                    margin-top: $marginMedium;
+                    margin-bottom: $marginSmall;
+                }
+                p {
+                    font-size: $letraPar;
+                    font-weight: 400px;
+                    line-height: 22.5px;
+                    color: $color4;
+                    margin-bottom: $marginMedium;
+                }
+                #readmore {
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $color2;
+                    margin-top: $marginMedium;
+                    margin-bottom: $marginSmall;
+                }
+            }
+        }
+    }
+
+    .numbers {
+        padding: 35px 12%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .stats {
+            flex:1;
+            .title {
+                font-weight: 700;
+                font-size: 48px;
+                color: $color2;
+                margin: 0;
+            }
+            .element {
+                font-size: 15px;
+                color: $color4;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -281,6 +281,7 @@ nav ul li {
 
 .team section .overlay .info .icon-container a:link {
   text-decoration: none;
+  color: #fff;
 }
 
 .team section .overlay .info .icon-container a:visited {

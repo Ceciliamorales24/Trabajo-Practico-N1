@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
-$color1:#004A99;
+$color1: #004A99;
 $color2: #fff;
 $color3: #00458f;
 $color4: #BFDDFE;
 $color5: #003B7A;
+$color6: rgba(20, 65, 110, 0.01);
+$color7: #0062CC;
 $letraPar: 15px;
 $letraH3: 36px;
 $letraH5: 22px;
@@ -39,8 +41,10 @@ nav ul li{
     background-color: $color1;
     color: $color2;
     text-align: center;
+    padding-top: 25px;
         h3 {
             font-size: $letraH3;
+            font-weight: 500;
         }
         .top {
             font-size: $letraPar;
@@ -81,7 +85,7 @@ nav ul li{
                 }
                 p {
                     font-size: $letraPar;
-                    font-weight: 400px;
+                    font-weight: 400;
                     line-height: 22.5px;
                     color: $color4;
                     margin-bottom: $marginMedium;
@@ -94,6 +98,7 @@ nav ul li{
                     line-height: 35px;
                     margin-top: $marginMedium;
                     margin-bottom: $marginSmall;
+                    text-decoration: none;
                 }
             }
         }
@@ -131,3 +136,117 @@ nav ul li{
         }
     }
 }
+
+
+
+
+
+/*------------------------------------------------------------------------
+                            SECCIÓN TEAM
+-------------------------------------------------------------------------*/
+
+.team {
+    background-color: $color2;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+        h3 {
+            font-size: $letraH3;
+            font-weight: 500;
+        }
+        .top {
+            font-size: $letraPar;
+            padding-left: 30%;
+            padding-right: 30%;
+        }
+     
+    section {
+        padding: 35px 12%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        .image1, .image2, .image3, .image4{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-size: cover;
+            overflow: hidden;
+            z-index: 1;
+            font-family: $fontCard;
+        }
+        .image1 {
+            background-image: url("img/team-01.jpg");
+        }
+        .image2 {
+            background-image: url("img/team-02.jpg");
+        }
+        .image3 {
+            background-image: url("img/team-03.jpg");
+        }
+        .image4 {
+            background-image: url("img/team-04.jpg");
+        }
+        .overlay {
+            height: 100%;
+            border-radius: 50%;
+            background-image: linear-gradient(rgba(15, 94, 173, 0.616), rgba(15, 94, 173, 0.616));
+            display: flex;
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+            color: $color2;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.5s, opacity 0.5s linear;
+            .info {
+                transform: translateY(300px);
+                transition: transform 0.5s;
+                h4 {
+                    padding-top: 0;
+                    margin-top: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+                p {
+                    padding-top: 0;
+                    margin-top: 0;
+                    font-style: italic;
+                    font-size: 15px;
+                }
+                .icon-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $color2;
+                    .icon {
+                        width: 15px;
+                        height: 15px;
+                        padding-left:8px;
+                        padding-right:8px;
+                    }
+                    .icon a:hover {
+                        color: $color7;                
+                    }
+                    
+                    a:link {
+                        text-decoration: none;
+                           }
+                    
+                    a:visited {
+                        text-decoration: none;
+                        color: $color2;
+                    }
+                }
+            }
+        }
+    }
+    .image1:hover .overlay, .image2:hover .overlay, .image3:hover .overlay, .image4:hover .overlay{
+        visibility: visible;
+        opacity: 1;
+        .info {
+        transform: translateX(0);
+        }
+    }
+}
+

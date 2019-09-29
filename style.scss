@@ -5,6 +5,7 @@ $color1:#004A99;
 $color2: #fff;
 $color3: #00458f;
 $color4: #BFDDFE;
+$color5: #003B7A;
 $letraPar: 15px;
 $letraH3: 36px;
 $letraH5: 22px;
@@ -32,7 +33,7 @@ nav ul li{
 
 
 /*------------------------------------------------------------------------
-S                            ECCIÓN WHY CHOOSE US
+                            SECCIÓN WHY CHOOSE US
 -------------------------------------------------------------------------*/
 .whyUs {
     background-color: $color1;
@@ -86,13 +87,26 @@ S                            ECCIÓN WHY CHOOSE US
                     margin-bottom: $marginMedium;
                 }
                 #readmore {
+                    display: block;
                     font-weight: 600;
                     font-size: 20px;
                     color: $color2;
+                    line-height: 35px;
                     margin-top: $marginMedium;
                     margin-bottom: $marginSmall;
                 }
             }
+        }
+    }
+
+    .card:hover {
+        background-color: $color5;
+        #readmore {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;           
+            border-bottom: 2px solid $color1;
         }
     }
 

@@ -13,7 +13,7 @@ nav ul li {
 }
 
 /*------------------------------------------------------------------------
-S                            ECCIÓN WHY CHOOSE US
+                            SECCIÓN WHY CHOOSE US
 -------------------------------------------------------------------------*/
 .whyUs {
   background-color: #004A99;
@@ -94,11 +94,25 @@ S                            ECCIÓN WHY CHOOSE US
 }
 
 .whyUs section .card .body #readmore {
+  display: block;
   font-weight: 600;
   font-size: 20px;
   color: #fff;
+  line-height: 35px;
   margin-top: 1em;
   margin-bottom: 0.5em;
+}
+
+.whyUs .card:hover {
+  background-color: #003B7A;
+}
+
+.whyUs .card:hover #readmore {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-bottom: 2px solid #004A99;
 }
 
 .whyUs .numbers {

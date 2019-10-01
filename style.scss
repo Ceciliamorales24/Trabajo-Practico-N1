@@ -289,16 +289,11 @@ nav ul li {
                             SECCIÓN OUR CLIENTS
 -------------------------------------------------------------------------*/
 
-.our-clients {
-    background-color: $color4;
-    padding-top: 0;
-}
-
 .titulo-clientes {
     color: $color8;
     font-size: 38 px;
     text-align: center;
-    font-weight: 500px;
+    font-weight: 200px;
     position: relative;
 }
 
@@ -306,14 +301,15 @@ nav ul li {
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/
-#contact {
+#contacto {
     background-color: #fff;
 }
 
-.contactus {
+.contact {
     background-color: #fff;
-    height: 100%;
-}
+ }
+
+
 
 /*------------------------------------------------------------------------
                             SECCIÓN FOOTER
@@ -331,7 +327,7 @@ haria que se viera mucho mejor.
 - El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
 el estilo de un elemento en particular. 
 */
-
+/*
 body {
     margin: 0
 }
@@ -552,3 +548,5 @@ input,
 .copyright span {
     font-weight: bold
 }
+
+*/

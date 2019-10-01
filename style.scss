@@ -8,21 +8,23 @@ $color4: #BFDDFE;
 $color5: #003B7A;
 $color6: rgba(20, 65, 110, 0.01);
 $color7: #0062CC;
+$color8: #283d50;
 $letraPar: 15px;
 $letraH3: 36px;
 $letraH5: 22px;
 $marginSmall: 0.5em;
 $marginMedium: 1em;
-$fontCard: 'Open Sans', sans-serif;
+$fontCard: 'Open Sans',
+sans-serif;
 
-body{
+body {
     background-color: $color1;
     font-family: 'Montserrat', sans-serif;
-    padding:0;
-    margin:0; 
-    }
+    padding: 0;
+    margin: 0;
+}
 
-nav ul li{
+nav ul li {
     list-style-type: none;
 }
 
@@ -42,22 +44,24 @@ nav ul li{
     color: $color2;
     text-align: center;
     padding-top: 25px;
-        h3 {
-            font-size: $letraH3;
-            font-weight: 500;
-        }
-        .top {
-            font-size: $letraPar;
-            padding-left: 30%;
-            padding-right: 30%;
-        }
-     
+
+    h3 {
+        font-size: $letraH3;
+        font-weight: 500;
+    }
+
+    .top {
+        font-size: $letraPar;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
     section {
         padding: 35px 12%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        
+
         .card {
             width: 300px;
             height: 280px;
@@ -69,20 +73,23 @@ nav ul li{
             display: flex;
             flex-direction: column;
             font-family: $fontCard;
-                                   
+
             i {
                 color: $color4;
-                font-size: 48px;                
+                font-size: 48px;
             }
+
             .body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+
                 h5 {
                     font-size: $letraH5;
                     margin-top: $marginMedium;
                     margin-bottom: $marginSmall;
                 }
+
                 p {
                     font-size: $letraPar;
                     font-weight: 400;
@@ -90,6 +97,7 @@ nav ul li{
                     color: $color4;
                     margin-bottom: $marginMedium;
                 }
+
                 #readmore {
                     display: block;
                     font-weight: 600;
@@ -106,11 +114,12 @@ nav ul li{
 
     .card:hover {
         background-color: $color5;
+
         #readmore {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 40%;           
+            width: 40%;
             border-bottom: 2px solid $color1;
         }
     }
@@ -120,14 +129,17 @@ nav ul li{
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
         .stats {
-            flex:1;
+            flex: 1;
+
             .title {
                 font-weight: 700;
                 font-size: 48px;
                 color: $color2;
                 margin: 0;
             }
+
             .element {
                 font-size: 15px;
                 color: $color4;
@@ -150,23 +162,28 @@ nav ul li{
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
-        h3 {
-            font-size: $letraH3;
-            font-weight: 500;
-        }
-        .top {
-            font-size: $letraPar;
-            padding-left: 30%;
-            padding-right: 30%;
-        }
-     
+
+    h3 {
+        font-size: $letraH3;
+        font-weight: 500;
+    }
+
+    .top {
+        font-size: $letraPar;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
     section {
         padding: 35px 12%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        
-        .image1, .image2, .image3, .image4{
+
+        .image1,
+        .image2,
+        .image3,
+        .image4 {
             width: 250px;
             height: 250px;
             border-radius: 50%;
@@ -175,18 +192,23 @@ nav ul li{
             z-index: 1;
             font-family: $fontCard;
         }
+
         .image1 {
             background-image: url("img/team-01.jpg");
         }
+
         .image2 {
             background-image: url("img/team-02.jpg");
         }
+
         .image3 {
             background-image: url("img/team-03.jpg");
         }
+
         .image4 {
             background-image: url("img/team-04.jpg");
         }
+
         .overlay {
             height: 100%;
             border-radius: 50%;
@@ -199,41 +221,47 @@ nav ul li{
             visibility: hidden;
             opacity: 0;
             transition: visibility 0.5s, opacity 0.5s linear;
+
             .info {
                 transform: translateY(300px);
                 transition: transform 0.5s;
+
                 h4 {
                     padding-top: 0;
                     margin-top: 0;
                     padding-bottom: 0;
                     margin-bottom: 0;
                 }
+
                 p {
                     padding-top: 0;
                     margin-top: 0;
                     font-style: italic;
                     font-size: 15px;
                 }
+
                 .icon-container {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     color: $color2;
+
                     .icon {
                         width: 15px;
                         height: 15px;
-                        padding-left:8px;
-                        padding-right:8px;
+                        padding-left: 8px;
+                        padding-right: 8px;
                     }
+
                     .icon a:hover {
-                        color: $color7;                
+                        color: $color7;
                     }
-                    
+
                     a:link {
                         text-decoration: none;
                         color: $color2;
                     }
-                    
+
                     a:visited {
                         text-decoration: none;
                         color: $color2;
@@ -242,12 +270,285 @@ nav ul li{
             }
         }
     }
-    .image1:hover .overlay, .image2:hover .overlay, .image3:hover .overlay, .image4:hover .overlay{
+
+    .image1:hover .overlay,
+    .image2:hover .overlay,
+    .image3:hover .overlay,
+    .image4:hover .overlay {
         visibility: visible;
         opacity: 1;
+
         .info {
-        transform: translateX(0);
+            transform: translateX(0);
         }
     }
 }
 
+
+/*------------------------------------------------------------------------
+                            SECCIÓN OUR CLIENTS
+-------------------------------------------------------------------------*/
+
+.our-clients {
+    background-color: $color4;
+    padding-top: 0;
+}
+
+.titulo-clientes {
+    color: $color8;
+    font-size: 38 px;
+    text-align: center;
+    font-weight: 500px;
+    position: relative;
+}
+
+
+/*------------------------------------------------------------------------
+                            SECCIÓN Contact us
+-------------------------------------------------------------------------*/
+#contact {
+    background-color: #fff;
+}
+
+.contactus {
+    background-color: #fff;
+    height: 100%;
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN FOOTER
+-------------------------------------------------------------------------*/
+/* - El div "wayne" deberia empezar un poco mas abajo, en sentido vertical, que los demas. 
+Un margin-top o un display: flex, flex-direction: column, justify-content: center, serian posibles soluciones
+- Si le quitamos el width de 40% al div de contact us, nos evitamos el problema de que los iconos se achiquen y pierdan la forma
+redonda al achicar la pantalla
+- El input esta un poco angosto. Yo haria que label fuera flex, y le daria al input type email flex 2, y al input submit flex 1 para que siempre
+ocupen el 100% del label y se vean mas anchos. Esto tambien soluciona el problema de que se pongan uno debajo del otro en algunas resoluciones. 
+- En resoluciones de entre 600 y 900px, las columnas 1 y 2, y las columnas 3 y 4, se ven muy juntas entre si. Quiza un margin en
+la media query pueda ser una solucion sencilla. En esa misma resolucion, hay muy poco aire en la caja en el bottom. Un padding 
+haria que se viera mucho mejor. 
+- Atencion a los iconos en resoluciones menores a 600px: no deberian ocupar el 100% del ancho, sino quedar ubicados a la izquierda
+- El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
+el estilo de un elemento en particular. 
+*/
+
+body {
+    margin: 0
+}
+
+footer {
+    color: white;
+    background-color: #004A99;
+    height: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 8px 10px;
+    display: flex;
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.parte1 {
+    display: flex;
+    flex: 1;
+}
+
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+
+h2 {
+    margin-top: 5%;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.columna1 {
+    width: 80%;
+}
+
+.columna3 {
+    width: 40%;
+}
+
+.image {
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding-right: 0%;
+
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+
+}
+
+.icon:hover {
+    background-color: #0062CC;
+}
+
+.columna4 {
+    width: 53%;
+    letter-spacing: 0.001em;
+}
+
+span {
+    font-weight: bold;
+}
+
+.copyright {
+    background-color: #00428A;
+    height: 150px;
+}
+
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 2;
+}
+
+a:link {
+    text-decoration: none;
+    color: $color2;
+}
+
+a:visited {
+    text-decoration: none;
+    color: $color2;
+    }
+
+input {
+    border: none;
+    padding: 0;
+    height: 33px;
+}
+
+.submit-button {
+    background-color: #007BFF;
+    border: none;
+    padding: 0;
+    height: 33px;
+    width: 90px;
+    color: #fff;
+}
+
+input[type=submit]:hover {
+    background-color: #0062CC;
+}
+
+.copyright {
+    background-color: #00428A;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.parte1 {
+    display: flex;
+
+}
+
+.columna1 {
+    flex: 1;
+}
+
+.columna2 {
+    flex: 1;
+}
+
+
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+
+.columna3 {
+    flex: 1;
+}
+
+.columna4 {
+    flex: 1;
+}
+
+.copyright {
+
+    height: 100%;
+}
+
+input,
+.s {
+    height: 33px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: smaller;
+        height: 100%;
+    }
+
+    .parte1 {
+        flex-wrap: wrap;
+    }
+
+    .parte2 {
+        flex-wrap: wrap;
+    }
+
+    .Columna1 {
+        width: 100%;
+    }
+
+
+    .Columna2 {
+        width: 100%;
+    }
+
+    .Columna3 {
+        width: 100%;
+    }
+
+    .Columna4 {
+        width: 100%;
+    }
+
+    .copyright {
+        font-size: 11px;
+        height: 100%;
+    }
+}
+
+.copyright span {
+    font-weight: bold
+}

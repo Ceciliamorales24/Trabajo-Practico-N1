@@ -10,12 +10,13 @@ $color6: rgba(20, 65, 110, 0.01);
 $color7: #0062CC;
 $color8: #283d50;
 $letraPar: 15px;
+$letraParch: 10px;
 $letraH3: 36px;
 $letraH5: 22px;
-$marginSmall: 0.5em;
 $marginMedium: 1em;
-$fontCard: 'Open Sans',
-sans-serif;
+$marginSmall: 0.5em;
+$marginSmaller: 0.2em;
+$fontCard: 'Open Sans', sans-serif;
 
 body {
     background-color: $color1;
@@ -56,7 +57,7 @@ nav ul li {
         padding-right: 30%;
     }
 
-    section {
+    .card-container {
         padding: 35px 12%;
         display: flex;
         justify-content: space-between;
@@ -122,6 +123,10 @@ nav ul li {
             width: 40%;
             border-bottom: 2px solid $color1;
         }
+
+        #readmore:hover {
+            border-bottom: 2px solid $color2;
+        }
     }
 
     .numbers {
@@ -151,8 +156,6 @@ nav ul li {
 
 
 
-
-
 /*------------------------------------------------------------------------
                             SECCIÓN TEAM
 -------------------------------------------------------------------------*/
@@ -174,7 +177,7 @@ nav ul li {
         padding-right: 30%;
     }
 
-    section {
+    .team-section {
         padding: 35px 12%;
         display: flex;
         justify-content: space-between;
@@ -550,3 +553,74 @@ input,
 }
 
 */
+
+/*------------------------------------------------------------------------
+                            SECCIÓN RESPONSIVE
+-------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY FOR WHY CHOOSE US
+-------------------------------------------------------------------------*/
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .whyUs {
+        h3 {
+            font-size: $letraH3;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .top {
+            font-size: $letraPar;
+            text-align: center;
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            .card {
+                width: 90%;
+                border-radius: 3%;
+                margin: 15px 15;
+                padding: 35px 30px 15px;
+                display: flex;
+                flex-direction: column;
+                font-family: $fontCard;
+            
+                .body {
+                padding: $marginMedium;
+                    h5 {
+                        font-size: $letraH5;
+                        margin-top: $marginSmall;
+                        margin-bottom: $marginSmaller;
+                    }
+                    p {
+                        font-size: $letraPar;
+                        font-weight: 400;
+                        color: $color4;
+                        margin-bottom: $marginSmall;
+                    }
+                    #readmore {
+                        display: block;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $color2;
+                        margin-top: $marginSmall;
+                        margin-bottom: $marginSmaller;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .card:hover {
+            #readmore {
+                width: 20%;
+            }
+        }
+    }
+}

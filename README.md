@@ -6,7 +6,7 @@ Integrantes:
 * Sol Borja
 * Ivana Croxcatto
 
-Git Page:
+Git Page:[https://ceciliamorales24.github.io/Trabajo-Practico-N1/](https://ceciliamorales24.github.io/Trabajo-Practico-N1/)
 
 
 

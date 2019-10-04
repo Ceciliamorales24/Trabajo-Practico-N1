@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   background-color: #004A99;
   font-family: 'Montserrat', sans-serif;
@@ -11,8 +16,61 @@ body {
 /*------------------------------------------------------------------------
                             SECCIÓN header
 -------------------------------------------------------------------------*/
-nav ul li {
+.header {
+  color: #004289;
+  background-color: #fff;
+  height: 80px;
+}
+
+.header .menu {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /*Flex a los elementos li, para que se ubiquen uno al lado del otro y sean flexibles. Pero tambien le tengo que decir display flex a mi nav , para que la img que está conenida por nav se alinea tambien junto con las listas*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .menu li {
+  padding: 20px;
+  /* No aplico un font-weight porque 
+            la medida estandar utilizada es de 500, la cual se 
+            le aplica por defecto */
+  /*a:visited {
+                    color: $color-azul; 
+                    /*REVISAR ESTO PORQUE NO SE APLICA EL HOVER Y EL VISITED
+                }*/
+}
+
+.header .menu li a {
+  text-decoration: none;
+}
+
+.header .menu li a:hover {
+  color: #007BFF;
+}
+
+.header .menu a:visited {
+  color: #004289;
+}
+
+/*tampoco le doy display:flex al header porque no me ubica en flex a los elementos a contenidos en li. por lo tanto tengo que asignar el display li a la class"menu" la cual contiene a mis elementos li a{*/
+nav {
+  /*Flex*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 7px;
+  /*Le doy display flex a mi nav para que img pueda ser ubicado al lado de los li*/
+}
+
+nav img {
+  height: 26px;
+  width: 67px;
+  padding: 20px;
 }
 
 /*------------------------------------------------------------------------

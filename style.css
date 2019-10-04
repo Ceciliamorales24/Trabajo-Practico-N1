@@ -94,7 +94,7 @@ nav img {
   padding-right: 30%;
 }
 
-.whyUs section {
+.whyUs .card-container {
   padding: 35px 12%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,7 +107,7 @@ nav img {
           align-items: flex-start;
 }
 
-.whyUs section .card {
+.whyUs .card-container .card {
   width: 300px;
   height: 280px;
   border-radius: 5%;
@@ -125,12 +125,12 @@ nav img {
   font-family: "Open Sans", sans-serif;
 }
 
-.whyUs section .card i {
+.whyUs .card-container .card i {
   color: #BFDDFE;
   font-size: 48px;
 }
 
-.whyUs section .card .body {
+.whyUs .card-container .card .body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,13 +142,13 @@ nav img {
       justify-content: space-around;
 }
 
-.whyUs section .card .body h5 {
+.whyUs .card-container .card .body h5 {
   font-size: 22px;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
-.whyUs section .card .body p {
+.whyUs .card-container .card .body p {
   font-size: 15px;
   font-weight: 400;
   line-height: 22.5px;
@@ -156,7 +156,7 @@ nav img {
   margin-bottom: 1em;
 }
 
-.whyUs section .card .body #readmore {
+.whyUs .card-container .card .body #readmore {
   display: block;
   font-weight: 600;
   font-size: 20px;
@@ -177,6 +177,10 @@ nav img {
   margin-right: auto;
   width: 40%;
   border-bottom: 2px solid #004A99;
+}
+
+.whyUs .card:hover #readmore:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .whyUs .numbers {
@@ -232,7 +236,7 @@ nav img {
   padding-right: 30%;
 }
 
-.team section {
+.team .team-section {
   padding: 35px 12%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,10 +249,10 @@ nav img {
           align-items: flex-start;
 }
 
-.team section .image1,
-.team section .image2,
-.team section .image3,
-.team section .image4 {
+.team .team-section .image1,
+.team .team-section .image2,
+.team .team-section .image3,
+.team .team-section .image4 {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -258,23 +262,23 @@ nav img {
   font-family: "Open Sans", sans-serif;
 }
 
-.team section .image1 {
+.team .team-section .image1 {
   background-image: url("img/team-01.jpg");
 }
 
-.team section .image2 {
+.team .team-section .image2 {
   background-image: url("img/team-02.jpg");
 }
 
-.team section .image3 {
+.team .team-section .image3 {
   background-image: url("img/team-03.jpg");
 }
 
-.team section .image4 {
+.team .team-section .image4 {
   background-image: url("img/team-04.jpg");
 }
 
-.team section .overlay {
+.team .team-section .overlay {
   height: 100%;
   border-radius: 50%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 94, 173, 0.616)), to(rgba(15, 94, 173, 0.616)));
@@ -296,7 +300,7 @@ nav img {
   transition: visibility 0.5s, opacity 0.5s linear;
 }
 
-.team section .overlay .info {
+.team .team-section .overlay .info {
   -webkit-transform: translateY(300px);
           transform: translateY(300px);
   -webkit-transition: -webkit-transform 0.5s;
@@ -305,21 +309,21 @@ nav img {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.team section .overlay .info h4 {
+.team .team-section .overlay .info h4 {
   padding-top: 0;
   margin-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-.team section .overlay .info p {
+.team .team-section .overlay .info p {
   padding-top: 0;
   margin-top: 0;
   font-style: italic;
   font-size: 15px;
 }
 
-.team section .overlay .info .icon-container {
+.team .team-section .overlay .info .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,23 +336,23 @@ nav img {
   color: #fff;
 }
 
-.team section .overlay .info .icon-container .icon {
+.team .team-section .overlay .info .icon-container .icon {
   width: 15px;
   height: 15px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.team section .overlay .info .icon-container .icon a:hover {
+.team .team-section .overlay .info .icon-container .icon a:hover {
   color: #0062CC;
 }
 
-.team section .overlay .info .icon-container a:link {
+.team .team-section .overlay .info .icon-container a:link {
   text-decoration: none;
   color: #fff;
 }
 
-.team section .overlay .info .icon-container a:visited {
+.team .team-section .overlay .info .icon-container a:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -630,4 +634,78 @@ input,
 }
 
 */
+/*------------------------------------------------------------------------
+                            SECCIÓN RESPONSIVE
+-------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------
+                            MEDIA QUERY FOR WHY CHOOSE US
+-------------------------------------------------------------------------*/
+@media (min-width: 600px) and (max-width: 800px) {
+  .whyUs h3 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .whyUs .top {
+    font-size: 15px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .whyUs .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .whyUs .card-container .card {
+    width: 90%;
+    border-radius: 3%;
+    margin: 15px 15;
+    padding: 35px 30px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+  }
+  .whyUs .card-container .card .body {
+    padding: 1em;
+  }
+  .whyUs .card-container .card .body h5 {
+    font-size: 22px;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+  }
+  .whyUs .card-container .card .body p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #BFDDFE;
+    margin-bottom: 0.5em;
+  }
+  .whyUs .card-container .card .body #readmore {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    text-decoration: none;
+  }
+  .whyUs .card:hover #readmore {
+    width: 20%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

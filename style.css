@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   background-color: #004A99;
   font-family: 'Montserrat', sans-serif;
@@ -11,8 +16,61 @@ body {
 /*------------------------------------------------------------------------
                             SECCIÓN header
 -------------------------------------------------------------------------*/
-nav ul li {
+.header {
+  color: #004289;
+  background-color: #fff;
+  height: 80px;
+}
+
+.header .menu {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /*Flex a los elementos li, para que se ubiquen uno al lado del otro y sean flexibles. Pero tambien le tengo que decir display flex a mi nav , para que la img que está conenida por nav se alinea tambien junto con las listas*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .menu li {
+  padding: 20px;
+  /* No aplico un font-weight porque 
+            la medida estandar utilizada es de 500, la cual se 
+            le aplica por defecto */
+  /*a:visited {
+                    color: $color-azul; 
+                    /*REVISAR ESTO PORQUE NO SE APLICA EL HOVER Y EL VISITED
+                }*/
+}
+
+.header .menu li a {
+  text-decoration: none;
+}
+
+.header .menu li a:hover {
+  color: #007BFF;
+}
+
+.header .menu a:visited {
+  color: #004289;
+}
+
+/*tampoco le doy display:flex al header porque no me ubica en flex a los elementos a contenidos en li. por lo tanto tengo que asignar el display li a la class"menu" la cual contiene a mis elementos li a{*/
+nav {
+  /*Flex*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 7px;
+  /*Le doy display flex a mi nav para que img pueda ser ubicado al lado de los li*/
+}
+
+nav img {
+  height: 26px;
+  width: 67px;
+  padding: 20px;
 }
 
 /*------------------------------------------------------------------------
@@ -36,7 +94,7 @@ nav ul li {
   padding-right: 30%;
 }
 
-.whyUs section {
+.whyUs .card-container {
   padding: 35px 12%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,7 +107,7 @@ nav ul li {
           align-items: flex-start;
 }
 
-.whyUs section .card {
+.whyUs .card-container .card {
   width: 300px;
   height: 280px;
   border-radius: 5%;
@@ -67,12 +125,12 @@ nav ul li {
   font-family: "Open Sans", sans-serif;
 }
 
-.whyUs section .card i {
+.whyUs .card-container .card i {
   color: #BFDDFE;
   font-size: 48px;
 }
 
-.whyUs section .card .body {
+.whyUs .card-container .card .body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,13 +142,13 @@ nav ul li {
       justify-content: space-around;
 }
 
-.whyUs section .card .body h5 {
+.whyUs .card-container .card .body h5 {
   font-size: 22px;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
-.whyUs section .card .body p {
+.whyUs .card-container .card .body p {
   font-size: 15px;
   font-weight: 400;
   line-height: 22.5px;
@@ -98,7 +156,7 @@ nav ul li {
   margin-bottom: 1em;
 }
 
-.whyUs section .card .body #readmore {
+.whyUs .card-container .card .body #readmore {
   display: block;
   font-weight: 600;
   font-size: 20px;
@@ -119,6 +177,10 @@ nav ul li {
   margin-right: auto;
   width: 40%;
   border-bottom: 2px solid #004A99;
+}
+
+.whyUs .card:hover #readmore:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .whyUs .numbers {
@@ -174,7 +236,7 @@ nav ul li {
   padding-right: 30%;
 }
 
-.team section {
+.team .team-section {
   padding: 35px 12%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,10 +249,10 @@ nav ul li {
           align-items: flex-start;
 }
 
-.team section .image1,
-.team section .image2,
-.team section .image3,
-.team section .image4 {
+.team .team-section .image1,
+.team .team-section .image2,
+.team .team-section .image3,
+.team .team-section .image4 {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -200,23 +262,23 @@ nav ul li {
   font-family: "Open Sans", sans-serif;
 }
 
-.team section .image1 {
+.team .team-section .image1 {
   background-image: url("img/team-01.jpg");
 }
 
-.team section .image2 {
+.team .team-section .image2 {
   background-image: url("img/team-02.jpg");
 }
 
-.team section .image3 {
+.team .team-section .image3 {
   background-image: url("img/team-03.jpg");
 }
 
-.team section .image4 {
+.team .team-section .image4 {
   background-image: url("img/team-04.jpg");
 }
 
-.team section .overlay {
+.team .team-section .overlay {
   height: 100%;
   border-radius: 50%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 94, 173, 0.616)), to(rgba(15, 94, 173, 0.616)));
@@ -238,7 +300,7 @@ nav ul li {
   transition: visibility 0.5s, opacity 0.5s linear;
 }
 
-.team section .overlay .info {
+.team .team-section .overlay .info {
   -webkit-transform: translateY(300px);
           transform: translateY(300px);
   -webkit-transition: -webkit-transform 0.5s;
@@ -247,21 +309,21 @@ nav ul li {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.team section .overlay .info h4 {
+.team .team-section .overlay .info h4 {
   padding-top: 0;
   margin-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-.team section .overlay .info p {
+.team .team-section .overlay .info p {
   padding-top: 0;
   margin-top: 0;
   font-style: italic;
   font-size: 15px;
 }
 
-.team section .overlay .info .icon-container {
+.team .team-section .overlay .info .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,23 +336,23 @@ nav ul li {
   color: #fff;
 }
 
-.team section .overlay .info .icon-container .icon {
+.team .team-section .overlay .info .icon-container .icon {
   width: 15px;
   height: 15px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.team section .overlay .info .icon-container .icon a:hover {
+.team .team-section .overlay .info .icon-container .icon a:hover {
   color: #0062CC;
 }
 
-.team section .overlay .info .icon-container a:link {
+.team .team-section .overlay .info .icon-container a:link {
   text-decoration: none;
   color: #fff;
 }
 
-.team section .overlay .info .icon-container a:visited {
+.team .team-section .overlay .info .icon-container a:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -328,7 +390,7 @@ nav ul li {
   position: relative;
 }
 
-p {
+.pclients {
   text-align: center;
   margin: auto;
   font-size: 15px;
@@ -367,14 +429,7 @@ img {
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/
-#contacto {
-  background-color: #fff;
-  text-align: center;
-  padding-top: 25px;
-}
-
 .contact {
-  background-color: #fff;
   background-color: #fff;
   text-align: center;
   display: -webkit-box;
@@ -383,5 +438,273 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN FOOTER
+-------------------------------------------------------------------------*/
+/* - El div "wayne" deberia empezar un poco mas abajo, en sentido vertical, que los demas. 
+Un margin-top o un display: flex, flex-direction: column, justify-content: center, serian posibles soluciones
+- Si le quitamos el width de 40% al div de contact us, nos evitamos el problema de que los iconos se achiquen y pierdan la forma
+redonda al achicar la pantalla
+- El input esta un poco angosto. Yo haria que label fuera flex, y le daria al input type email flex 2, y al input submit flex 1 para que siempre
+ocupen el 100% del label y se vean mas anchos. Esto tambien soluciona el problema de que se pongan uno debajo del otro en algunas resoluciones. 
+- En resoluciones de entre 600 y 900px, las columnas 1 y 2, y las columnas 3 y 4, se ven muy juntas entre si. Quiza un margin en
+la media query pueda ser una solucion sencilla. En esa misma resolucion, hay muy poco aire en la caja en el bottom. Un padding 
+haria que se viera mucho mejor. 
+- Atencion a los iconos en resoluciones menores a 600px: no deberian ocupar el 100% del ancho, sino quedar ubicados a la izquierda
+- El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
+el estilo de un elemento en particular. 
+*/
+/*
+body {
+    margin: 0
+}
+footer {
+    color: white;
+    background-color: #004A99;
+    height: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 8px 10px;
+    display: flex;
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.parte1 {
+    display: flex;
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+h2 {
+    margin-top: 5%;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+.columna1 {
+    width: 80%;
+}
+.columna3 {
+    width: 40%;
+}
+.image {
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding-right: 0%;
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.icon:hover {
+    background-color: #0062CC;
+}
+.columna4 {
+    width: 53%;
+    letter-spacing: 0.001em;
+}
+span {
+    font-weight: bold;
+}
+.copyright {
+    background-color: #00428A;
+    height: 150px;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 2;
+}
+a:link {
+    text-decoration: none;
+    color: $color2;
+}
+a:visited {
+    text-decoration: none;
+    color: $color2;
+    }
+input {
+    border: none;
+    padding: 0;
+    height: 33px;
+}
+.submit-button {
+    background-color: #007BFF;
+    border: none;
+    padding: 0;
+    height: 33px;
+    width: 90px;
+    color: #fff;
+}
+input[type=submit]:hover {
+    background-color: #0062CC;
+}
+.copyright {
+    background-color: #00428A;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.parte1 {
+    display: flex;
+}
+.columna1 {
+    flex: 1;
+}
+.columna2 {
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+.columna3 {
+    flex: 1;
+}
+.columna4 {
+    flex: 1;
+}
+.copyright {
+    height: 100%;
+}
+input,
+.s {
+    height: 33px;
+}
+@media (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: smaller;
+        height: 100%;
+    }
+    .parte1 {
+        flex-wrap: wrap;
+    }
+    .parte2 {
+        flex-wrap: wrap;
+    }
+    .Columna1 {
+        width: 100%;
+    }
+    .Columna2 {
+        width: 100%;
+    }
+    .Columna3 {
+        width: 100%;
+    }
+    .Columna4 {
+        width: 100%;
+    }
+    .copyright {
+        font-size: 11px;
+        height: 100%;
+    }
+}
+.copyright span {
+    font-weight: bold
+}
+*/
+/*------------------------------------------------------------------------
+                            SECCIÓN RESPONSIVE
+-------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------
+                            MEDIA QUERY FOR WHY CHOOSE US
+-------------------------------------------------------------------------*/
+@media (min-width: 600px) and (max-width: 800px) {
+  .whyUs h3 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .whyUs .top {
+    font-size: 15px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .whyUs .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .whyUs .card-container .card {
+    width: 90%;
+    border-radius: 3%;
+    margin: 15px 15;
+    padding: 35px 30px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+  }
+  .whyUs .card-container .card .body {
+    padding: 1em;
+  }
+  .whyUs .card-container .card .body h5 {
+    font-size: 22px;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+  }
+  .whyUs .card-container .card .body p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #BFDDFE;
+    margin-bottom: 0.5em;
+  }
+  .whyUs .card-container .card .body #readmore {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    text-decoration: none;
+  }
+  .whyUs .card:hover #readmore {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

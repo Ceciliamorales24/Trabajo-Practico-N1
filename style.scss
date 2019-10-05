@@ -9,13 +9,22 @@ $color5: #003B7A;
 $color6: rgba(20, 65, 110, 0.01);
 $color7: #0062CC;
 $color8: #283d50;
+$color-azul:#004289;
+$color-azul-hover:#007BFF;
 $letraPar: 15px;
+$letraParch: 10px;
 $letraH3: 36px;
 $letraH5: 22px;
-$marginSmall: 0.5em;
 $marginMedium: 1em;
-$fontCard: 'Open Sans',
-sans-serif;
+$marginSmall: 0.5em;
+$marginSmaller: 0.2em;
+$fontCard: 'Open Sans', sans-serif;
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
 
 body {
     background-color: $color1;
@@ -29,9 +38,63 @@ body {
                             SECCIÓN header
 -------------------------------------------------------------------------*/
 
+.header {
+    color: $color-azul;
+    background-color: $color2;
+    height: 80px;
 
-nav ul li {
-    list-style-type: none;
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        /*Flex a los elementos li, para que se ubiquen uno al lado del otro y sean flexibles. Pero tambien le tengo que decir display flex a mi nav , para que la img que está conenida por nav se alinea tambien junto con las listas*/
+        display: flex;
+
+        li {
+            padding: 20px;
+
+            a {
+                text-decoration: none;
+            }
+
+            /* No aplico un font-weight porque 
+            la medida estandar utilizada es de 500, la cual se 
+            le aplica por defecto */
+
+
+            /*a:visited {
+                    color: $color-azul; 
+                    /*REVISAR ESTO PORQUE NO SE APLICA EL HOVER Y EL VISITED
+                }*/
+        }
+
+        li a:hover {
+            color: $color-azul-hover;
+
+        }
+        a:visited {
+            color: $color-azul;
+
+        }
+    }
+}
+
+/*tampoco le doy display:flex al header porque no me ubica en flex a los elementos a contenidos en li. por lo tanto tengo que asignar el display li a la class"menu" la cual contiene a mis elementos li a{*/
+
+
+nav {
+    /*Flex*/
+    display: flex;
+    justify-content: space-around;
+    padding: 7px;
+
+    /*Le doy display flex a mi nav para que img pueda ser ubicado al lado de los li*/
+
+    img {
+        height: 26px;
+        width: 67px;
+        padding: 20px;
+    }
 }
 
 
@@ -56,7 +119,7 @@ nav ul li {
         padding-right: 30%;
     }
 
-    section {
+    .card-container {
         padding: 35px 12%;
         display: flex;
         justify-content: space-between;
@@ -122,6 +185,10 @@ nav ul li {
             width: 40%;
             border-bottom: 2px solid $color1;
         }
+
+        #readmore:hover {
+            border-bottom: 2px solid $color2;
+        }
     }
 
     .numbers {
@@ -151,8 +218,6 @@ nav ul li {
 
 
 
-
-
 /*------------------------------------------------------------------------
                             SECCIÓN TEAM
 -------------------------------------------------------------------------*/
@@ -174,7 +239,7 @@ nav ul li {
         padding-right: 30%;
     }
 
-    section {
+    .team-section {
         padding: 35px 12%;
         display: flex;
         justify-content: space-between;
@@ -301,8 +366,7 @@ nav ul li {
     font-weight: 500;
     position: relative;
 }
-
-p {
+.pclients {
     text-align: center;
     margin: auto;
     font-size: 15px;
@@ -323,26 +387,20 @@ p {
     height: 160px;
 }
 
-.logo-cliente {
+.logo-cliente{
     height: 130px;
 }
 
 img {
     vertical-align: middle;
     border-style: none;
-}
+    }
 
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/
-#contacto {
-    background-color: #fff;
-    text-align: center;
-    padding-top: 25px;
-}
 
 .contact {
-    background-color: #fff;
     background-color: $color2;
     text-align: center;
     display: flex;
@@ -350,4 +408,267 @@ img {
 }
 
 
+/*------------------------------------------------------------------------
+                            SECCIÓN FOOTER
+-------------------------------------------------------------------------*/
+/* - El div "wayne" deberia empezar un poco mas abajo, en sentido vertical, que los demas. 
+Un margin-top o un display: flex, flex-direction: column, justify-content: center, serian posibles soluciones
+- Si le quitamos el width de 40% al div de contact us, nos evitamos el problema de que los iconos se achiquen y pierdan la forma
+redonda al achicar la pantalla
+- El input esta un poco angosto. Yo haria que label fuera flex, y le daria al input type email flex 2, y al input submit flex 1 para que siempre
+ocupen el 100% del label y se vean mas anchos. Esto tambien soluciona el problema de que se pongan uno debajo del otro en algunas resoluciones. 
+- En resoluciones de entre 600 y 900px, las columnas 1 y 2, y las columnas 3 y 4, se ven muy juntas entre si. Quiza un margin en
+la media query pueda ser una solucion sencilla. En esa misma resolucion, hay muy poco aire en la caja en el bottom. Un padding 
+haria que se viera mucho mejor. 
+- Atencion a los iconos en resoluciones menores a 600px: no deberian ocupar el 100% del ancho, sino quedar ubicados a la izquierda
+- El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
+el estilo de un elemento en particular. 
+*/
+/*
+body {
+    margin: 0
+}
+footer {
+    color: white;
+    background-color: #004A99;
+    height: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 8px 10px;
+    display: flex;
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.parte1 {
+    display: flex;
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+h2 {
+    margin-top: 5%;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+.columna1 {
+    width: 80%;
+}
+.columna3 {
+    width: 40%;
+}
+.image {
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding-right: 0%;
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.icon:hover {
+    background-color: #0062CC;
+}
+.columna4 {
+    width: 53%;
+    letter-spacing: 0.001em;
+}
+span {
+    font-weight: bold;
+}
+.copyright {
+    background-color: #00428A;
+    height: 150px;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 2;
+}
+a:link {
+    text-decoration: none;
+    color: $color2;
+}
+a:visited {
+    text-decoration: none;
+    color: $color2;
+    }
+input {
+    border: none;
+    padding: 0;
+    height: 33px;
+}
+.submit-button {
+    background-color: #007BFF;
+    border: none;
+    padding: 0;
+    height: 33px;
+    width: 90px;
+    color: #fff;
+}
+input[type=submit]:hover {
+    background-color: #0062CC;
+}
+.copyright {
+    background-color: #00428A;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.parte1 {
+    display: flex;
+}
+.columna1 {
+    flex: 1;
+}
+.columna2 {
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+.columna3 {
+    flex: 1;
+}
+.columna4 {
+    flex: 1;
+}
+.copyright {
+    height: 100%;
+}
+input,
+.s {
+    height: 33px;
+}
+@media (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: smaller;
+        height: 100%;
+    }
+    .parte1 {
+        flex-wrap: wrap;
+    }
+    .parte2 {
+        flex-wrap: wrap;
+    }
+    .Columna1 {
+        width: 100%;
+    }
+    .Columna2 {
+        width: 100%;
+    }
+    .Columna3 {
+        width: 100%;
+    }
+    .Columna4 {
+        width: 100%;
+    }
+    .copyright {
+        font-size: 11px;
+        height: 100%;
+    }
+}
+.copyright span {
+    font-weight: bold
+}
+*/
 
+/*------------------------------------------------------------------------
+                            SECCIÓN RESPONSIVE
+-------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY FOR WHY CHOOSE US
+-------------------------------------------------------------------------*/
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .whyUs {
+        h3 {
+            font-size: $letraH3;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .top {
+            font-size: $letraPar;
+            text-align: center;
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            .card {
+                width: 90%;
+                border-radius: 3%;
+                margin: 15px 15;
+                padding: 35px 30px 15px;
+                display: flex;
+                flex-direction: column;
+                font-family: $fontCard;
+            
+                .body {
+                padding: $marginMedium;
+                    h5 {
+                        font-size: $letraH5;
+                        margin-top: $marginSmall;
+                        margin-bottom: $marginSmaller;
+                    }
+                    p {
+                        font-size: $letraPar;
+                        font-weight: 400;
+                        color: $color4;
+                        margin-bottom: $marginSmall;
+                    }
+                    #readmore {
+                        display: block;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $color2;
+                        margin-top: $marginSmall;
+                        margin-bottom: $marginSmaller;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .card:hover {
+            #readmore {
+                width: 20%;
+            }
+        }
+    }
+}

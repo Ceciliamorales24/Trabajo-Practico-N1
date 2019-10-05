@@ -2,7 +2,7 @@
 Primer Trabajo Práctico Grupal\
 Integrantes:
 * Cecilia Morales
-* Guadalupe Goico
+* Guadalupe Goicochea
 * Sol Borja
 * Ivana Croxcatto
 

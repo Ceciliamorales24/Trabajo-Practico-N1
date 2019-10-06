@@ -684,8 +684,16 @@ input,
         }
         .card:hover {
             #readmore {
-                width: 35%;
+                width: 25%;
             }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .whyUs .card-container .card:hover {
+        #readmore {
+            width: 35%;
         }
     }
 }

@@ -711,6 +711,12 @@ input,
     text-decoration: none;
   }
   .whyUs .card:hover #readmore {
+    width: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .whyUs .card-container .card:hover #readmore {
     width: 35%;
   }
 }

@@ -15,9 +15,11 @@ $letraPar: 15px;
 $letraParch: 10px;
 $letraH3: 36px;
 $letraH5: 22px;
+$marginMM: 1.4em;
 $marginMedium: 1em;
 $marginSmall: 0.5em;
 $marginSmaller: 0.2em;
+$marginSmallerer: 0.1em;
 $fontCard: 'Open Sans', sans-serif;
 
 
@@ -240,7 +242,7 @@ nav {
     }
 
     .team-section {
-        padding: 35px 12%;
+        padding: 35px 210px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -257,6 +259,14 @@ nav {
             z-index: 1;
             font-family: $fontCard;
         }
+        // .image1:after,
+        // .image2:after,
+        // .image3:after,
+        // .image4:after {
+        //     content: "";
+        //     display: block;
+        //     padding-bottom: 70%;
+        // }
 
         .image1 {
             background-image: url("img/team-01.jpg");
@@ -611,8 +621,11 @@ input,
                             MEDIA QUERY FOR WHY CHOOSE US
 -------------------------------------------------------------------------*/
 
-@media (min-width: 600px) and (max-width: 800px) {
+@media (max-width: 800px) {
     .whyUs {
+        padding-left: 2%;
+        padding-right: 2%;
+
         h3 {
             font-size: $letraH3;
             text-align: center;
@@ -631,35 +644,39 @@ input,
             margin: 5px;
             padding-left: 15px;
             padding-right: 15px;
+            
             .card {
                 width: 90%;
+                height: 100%;
                 border-radius: 3%;
-                margin: 15px 15;
-                padding: 35px 30px 15px;
+                margin: 15px;
+                padding: 35px 35px 0;
                 display: flex;
                 flex-direction: column;
                 font-family: $fontCard;
             
                 .body {
-                padding: $marginMedium;
+                padding: $marginSmaller $marginSmallerer $marginSmallerer $marginSmall;
+                margin: $marginMedium;
                     h5 {
                         font-size: $letraH5;
                         margin-top: $marginSmall;
-                        margin-bottom: $marginSmaller;
+                        margin-bottom: 0;
                     }
                     p {
                         font-size: $letraPar;
                         font-weight: 400;
                         color: $color4;
-                        margin-bottom: $marginSmall;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
                     }
                     #readmore {
                         display: block;
                         font-weight: 600;
                         font-size: 20px;
                         color: $color2;
-                        margin-top: $marginSmall;
-                        margin-bottom: $marginSmaller;
+                        margin-top: $marginSmallerer;
+                        margin-bottom: 0;
                         text-decoration: none;
                     }
                 }
@@ -667,7 +684,132 @@ input,
         }
         .card:hover {
             #readmore {
-                width: 20%;
+                width: 35%;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .whyUs .numbers {
+        padding: 35px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        #arriba {
+            flex-basis: 40%;
+        }
+
+        #abajo {
+            flex-basis: 40%;
+        }
+
+        .stats {
+            .title {
+                font-weight: 700;
+                font-size: 48px;
+                color: $color2;
+                margin: 0;
+            }
+
+            .element {
+                font-size: 15px;
+                color: $color4;
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY TABLET FOR TEAM
+-------------------------------------------------------------------------*/
+@media (min-width: 801px) and (max-width: 1024px) {
+.team {
+    padding-bottom: $marginSmallerer;
+        h3 {
+            margin-top: $marginSmallerer;
+            margin-bottom: $marginSmallerer;
+        }
+        .top {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .team-section {
+            padding-left: $marginMM;
+            padding-right: $marginMM;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+            
+        .image1, .image2, .image3, .image4 {
+            height: 200px;
+            height: 200px;
+            padding: $marginSmallerer;
+        }
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .team {
+    padding-bottom: $marginSmallerer;
+        h3 {
+            margin-top: $marginSmallerer;
+            margin-bottom: $marginSmallerer;
+        }
+        .top {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .team-section {
+            padding-left: $marginMM;
+            padding-right: $marginMM;
+            display: flex;
+            flex-wrap: wrap;
+            
+            #sup {
+                flex-basis: 47%;
+                margin-bottom: $marginMedium;
+            }
+            #bottom {
+                flex-basis: 47%;
+            }
+            .image1, .image2, .image3, .image4 {
+                height: 315px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY CEL FOR TEAM
+-------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+    .team {
+        padding-bottom: $marginSmallerer;
+            h3 {
+                margin-top: $marginSmallerer;
+                margin-bottom: $marginSmallerer;
+            }
+            .top {
+                padding-left: 25%;
+                padding-right: 25%;
+            }
+            .team-section {
+                padding-left: $marginSmallerer;
+                padding-right: $marginSmallerer;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                   
+            .image1, .image2, .image3, .image4 {
+                width: 400px;
+                height: 400px;
+                margin-bottom: $marginSmall;
             }
         }
     }

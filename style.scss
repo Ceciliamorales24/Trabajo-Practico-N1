@@ -29,7 +29,7 @@ $fontCard: 'Open Sans', sans-serif;
 }
 
 body {
-    background-color: $color1;
+    // background-color: $color1;
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
@@ -112,7 +112,7 @@ nav {
 
     h3 {
         font-size: $letraH3;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .top {
@@ -218,6 +218,29 @@ nav {
     }
 }
 
+/*------------------------------------------------------------------------
+                            SECCIÓN TESTIMONIALS
+-------------------------------------------------------------------------*/
+.testimonials {
+    background-color: #ECF5FF;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+
+    h3 {
+        font-size: $letraH3;
+        font-weight: 600;
+        color: #283D50;
+    }
+    
+    #text-card {
+        width: 200px;
+        height: 200px;
+        background-color: red; //cualquier color por ahora para que se vea
+        display: block;
+    }
+}
 
 
 /*------------------------------------------------------------------------
@@ -232,7 +255,8 @@ nav {
 
     h3 {
         font-size: $letraH3;
-        font-weight: 500;
+        font-weight: 600;
+        color: #283D50;
     }
 
     .top {
@@ -370,8 +394,8 @@ nav {
 }
 
 .style-h3 {
-    font-size: $letraH3;
-    color:$color8;
+    font-size: 36px;
+    color: #283d50;
     text-align: center;
     font-weight: 500;
     position: relative;
@@ -386,26 +410,28 @@ nav {
 }
 
 .clientslog {
-    padding: 64px;
+    padding: 64px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $color2;
-    border-right: 1px solid #d6eaff;
-    border-bottom: 1px solid #d6eaff;
     overflow: hidden;
-    height: 160px;
-}
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    //width: 50px;
 
-.logo-cliente{
-    height: 130px;
-}
+    .logo-cliente {
+        padding: 40px;
+        flex-basis:18%;
+        border: 1px solid #d6eaff;
+        background: $color2;
 
-img {
-    vertical-align: middle;
-    border-style: none;
+        img{
+            max-width: 100%;
+            max-height: 64px;
+        }
     }
-
+}
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/
@@ -415,8 +441,12 @@ img {
     text-align: center;
     display: flex;
     align-items: center;
-}
 
+    .style-h3{
+        display: block;
+        width: 100%;
+    }
+}
 
 /*------------------------------------------------------------------------
                             SECCIÓN FOOTER
@@ -799,20 +829,20 @@ input,
 @media (max-width: 600px) {
     .team {
         padding-bottom: $marginSmallerer;
-            h3 {
-                margin-top: $marginSmallerer;
-                margin-bottom: $marginSmallerer;
-            }
-            .top {
-                padding-left: 25%;
-                padding-right: 25%;
-            }
-            .team-section {
-                padding-left: $marginSmallerer;
-                padding-right: $marginSmallerer;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
+        h3 {
+            margin-top: $marginSmallerer;
+            margin-bottom: $marginSmallerer;
+        }
+        .top {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .team-section {
+            padding-left: $marginSmallerer;
+            padding-right: $marginSmallerer;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
                    
             .image1, .image2, .image3, .image4 {
                 width: 400px;

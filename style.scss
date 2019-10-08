@@ -226,6 +226,7 @@ nav {
 .testimonials {
     background-color: #ECF5FF;
     text-align: center;
+
     height: 450px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -254,10 +255,12 @@ nav {
     //         cursor: pointer;
     // }
 
+
     h3 {
         font-size: $letraH3;
         font-weight: 600;
         color: #283D50;
+
         margin-bottom: $marginSmallerer;
     }
     
@@ -458,45 +461,47 @@ nav {
     background-color: $color4;
     text-align: center;
     padding-top: 10px;
+}
 
-    .style-h3 {
-        font-size: 36px;
-        color: #283d50;
-        text-align: center;
-        font-weight: 500;
-        position: relative;
+.style-h3 {
+    font-size: 36px;
+    color: #283d50;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+}
+.pclients {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 30px;
+    color: #556877;
+    width: 50%;
+}
+
+.clientslog {
+    padding: 64px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    //width: 50px;
+
+    .logo-cliente {
+        padding: 40px;
+        flex-basis:18%;
+        border: 1px solid #d6eaff;
+        background: $color2;
+
+        img{
+            max-width: 100%;
+            max-height: 64px;
         }
-    .pclients {
-        text-align: center;
-        margin: auto;
-        font-size: 15px;
-        padding-bottom: 30px;
-        color: #556877;
-        width: 50%;
     }
 
-    .clientslog {
-        padding: 64px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $color2;
-        border-right: 1px solid #d6eaff;
-        border-bottom: 1px solid #d6eaff;
-        overflow: hidden;
-        height: 160px;
-    
-        .logo-cliente{
-            height: 130px;
-            width: 100px; //solo puse un ancho para ver qué efecto hacía
-            
-    
-            img {
-                vertical-align: middle;
-                border-style: none;
-            }
-        }
-    }
 }
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
@@ -507,8 +512,12 @@ nav {
     text-align: center;
     display: flex;
     align-items: center;
-}
 
+    .style-h3{
+        display: block;
+        width: 100%;
+    }
+}
 
 /*------------------------------------------------------------------------
                             SECCIÓN FOOTER

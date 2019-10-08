@@ -220,20 +220,11 @@ nav img {
 .testimonials {
   background-color: #ECF5FF;
   text-align: center;
-  height: 450px;
+  height: 1500px;
   padding-top: 25px;
   padding-bottom: 25px;
   -webkit-box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
           box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.testimonials input {
-  display: none;
 }
 
 .testimonials h3 {
@@ -243,46 +234,70 @@ nav img {
   margin-bottom: 0.1em;
 }
 
-.testimonials .slide-img {
-  position: absolute;
-  left: 15%;
-  z-index: -1;
+.testimonials #text-card {
+  height: 250px;
+  padding: 5px 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.testimonials #nav-dots {
-  width: 100%;
-  height: 80px;
-  top: 400px;
-  left: 0px;
-  position: absolute;
-  display: inline-block;
-  text-align: center;
-  z-index: 99;
-  cursor: default;
+.testimonials #text-card .image {
+  width: 120px;
+  height: 120px;
+  margin: 15px;
+  border-radius: 50%;
+  background-size: cover;
+  overflow: hidden;
 }
 
-.testimonials #nav-dots .dots {
-  width: 25px;
-  height: 25px;
-  margin: 0 3px;
-  background-color: rgba(138, 136, 136, 0.685);
-  border-radius: 100%;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+.testimonials #text-card #image1 {
+  background-image: url("img/testimonial-1.jpg");
 }
 
-.testimonials #i1:checked ~ #one, .testimonials #i2:checked ~ #two, .testimonials #i3:checked ~ #three, .testimonials #i4:checked ~ #four, .testimonials #i5:checked ~ #five {
-  display: block;
-  z-index: 99;
+.testimonials #text-card #image2 {
+  background-image: url("img/testimonial-2.jpg");
 }
 
-.testimonials #i1:checked ~ #nav_dots #dot1,
-.testimonials #i2:checked ~ #nav_dots #dot2,
-.testimonials #i3:checked ~ #nav_dots #dot3,
-.testimonials #i4:checked ~ #nav_dots #dot4,
-.testimonials #i5:checked ~ #nav_dots #dot5 {
-  background-color: #007BFF;
+.testimonials #text-card #image3 {
+  background-image: url("img/testimonial-3.jpg");
+}
+
+.testimonials #text-card #image4 {
+  background-image: url("img/testimonial-4.jpg");
+}
+
+.testimonials #text-card #image5 {
+  background-image: url("img/testimonial-5.jpg");
+}
+
+.testimonials #text-card .text {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  text-align: left;
+}
+
+.testimonials #text-card .text h4 {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.testimonials #text-card .text .subtitle {
+  font-size: 14px;
+  color: rgba(138, 136, 136, 0.685);
+  margin-top: 0.1em;
+}
+
+.testimonials #text-card .text p {
+  color: rgba(46, 45, 45, 0.925);
+  font-style: italic;
 }
 
 /*------------------------------------------------------------------------
@@ -470,33 +485,34 @@ nav img {
   width: 50%;
 }
 
-.clientslog {
-  padding: 64px 0;
+.our .clientslog {
+  padding: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-right: 1px solid #d6eaff;
+  border-bottom: 1px solid #d6eaff;
   overflow: hidden;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 0 auto;
+  height: 160px;
 }
 
-.clientslog .logo-cliente {
-  padding: 40px;
-  flex-basis: 18%;
-  border: 1px solid #d6eaff;
-  background: #fff;
-}
-.clientslog .logo-cliente img {
-  max-width: 100%;
-  max-height: 64px;
-
+.our .clientslog .logo-cliente {
+  height: 130px;
+  width: 100px;
 }
 
 .our .clientslog .logo-cliente img {
   vertical-align: middle;
   border-style: none;
 }
+
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/

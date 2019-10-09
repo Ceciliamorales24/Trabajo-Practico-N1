@@ -302,11 +302,11 @@ nav {
         z-index: 99;
     }
 
-    #i1:checked ~ #nav_dots #dot1, 
-    #i2:checked ~ #nav_dots #dot2,
-    #i3:checked ~ #nav_dots #dot3,
-    #i4:checked ~ #nav_dots #dot4,
-    #i5:checked ~ #nav_dots #dot5 {
+    #i1:checked ~ #nav-dots #dot1, 
+    #i2:checked ~ #nav-dots #dot2,
+    #i3:checked ~ #nav-dots #dot3,
+    #i4:checked ~ #nav-dots #dot4,
+    #i5:checked ~ #nav-dots #dot5 {
         background-color: $color-azul-hover;
     }
 }

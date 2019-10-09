@@ -1,0 +1,862 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #004A99;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN header
+-------------------------------------------------------------------------*/
+.header {
+  color: #004289;
+  background-color: #fff;
+  height: 80px;
+}
+
+.header .menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /*Flex a los elementos li, para que se ubiquen uno al lado del otro y sean flexibles. Pero tambien le tengo que decir display flex a mi nav , para que la img que está conenida por nav se alinea tambien junto con las listas*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .menu li {
+  padding: 20px;
+  /* No aplico un font-weight porque 
+            la medida estandar utilizada es de 500, la cual se 
+            le aplica por defecto */
+  /*a:visited {
+                    color: $color-azul; 
+                    /*REVISAR ESTO PORQUE NO SE APLICA EL HOVER Y EL VISITED
+                }*/
+}
+
+.header .menu li a {
+  text-decoration: none;
+}
+
+.header .menu li a:hover {
+  color: #007BFF;
+}
+
+.header .menu a:visited {
+  color: #004289;
+}
+
+/*tampoco le doy display:flex al header porque no me ubica en flex a los elementos a contenidos en li. por lo tanto tengo que asignar el display li a la class"menu" la cual contiene a mis elementos li a{*/
+nav {
+  /*Flex*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 7px;
+  /*Le doy display flex a mi nav para que img pueda ser ubicado al lado de los li*/
+}
+
+nav img {
+  height: 26px;
+  width: 67px;
+  padding: 20px;
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN WHY CHOOSE US
+-------------------------------------------------------------------------*/
+.whyUs {
+  background-color: #004A99;
+  color: #fff;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.whyUs h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.whyUs .top {
+  font-size: 15px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.whyUs .card-container {
+  padding: 35px 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.whyUs .card-container .card {
+  width: 300px;
+  height: 280px;
+  border-radius: 5%;
+  background-color: #00458f;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 35px 25px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+}
+
+.whyUs .card-container .card i {
+  color: #BFDDFE;
+  font-size: 48px;
+}
+
+.whyUs .card-container .card .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.whyUs .card-container .card .body h5 {
+  font-size: 22px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.whyUs .card-container .card .body p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  color: #BFDDFE;
+  margin-bottom: 1em;
+}
+
+.whyUs .card-container .card .body #readmore {
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  line-height: 35px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+}
+
+.whyUs .card:hover {
+  background-color: #003B7A;
+}
+
+.whyUs .card:hover #readmore {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-bottom: 2px solid #004A99;
+}
+
+.whyUs .card:hover #readmore:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.whyUs .numbers {
+  padding: 35px 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.whyUs .numbers .stats {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.whyUs .numbers .stats .title {
+  font-weight: 700;
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+}
+
+.whyUs .numbers .stats .element {
+  font-size: 15px;
+  color: #BFDDFE;
+  margin: 0;
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN TEAM
+-------------------------------------------------------------------------*/
+.team {
+  background-color: #fff;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.team h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.team .top {
+  font-size: 15px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.team .team-section {
+  padding: 35px 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.team .team-section .image1,
+.team .team-section .image2,
+.team .team-section .image3,
+.team .team-section .image4 {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+}
+
+.team .team-section .image1 {
+  background-image: url("img/team-01.jpg");
+}
+
+.team .team-section .image2 {
+  background-image: url("img/team-02.jpg");
+}
+
+.team .team-section .image3 {
+  background-image: url("img/team-03.jpg");
+}
+
+.team .team-section .image4 {
+  background-image: url("img/team-04.jpg");
+}
+
+.team .team-section .overlay {
+  height: 100%;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 94, 173, 0.616)), to(rgba(15, 94, 173, 0.616)));
+  background-image: linear-gradient(rgba(15, 94, 173, 0.616), rgba(15, 94, 173, 0.616));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.5s, opacity 0.5s linear;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.team .team-section .overlay .info {
+  -webkit-transform: translateY(300px);
+          transform: translateY(300px);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.team .team-section .overlay .info h4 {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.team .team-section .overlay .info p {
+  padding-top: 0;
+  margin-top: 0;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.team .team-section .overlay .info .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.team .team-section .overlay .info .icon-container .icon {
+  width: 15px;
+  height: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.team .team-section .overlay .info .icon-container .icon a:hover {
+  color: #0062CC;
+}
+
+.team .team-section .overlay .info .icon-container a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.team .team-section .overlay .info .icon-container a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.team .image1:hover .overlay,
+.team .image2:hover .overlay,
+.team .image3:hover .overlay,
+.team .image4:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.team .image1:hover .overlay .info,
+.team .image2:hover .overlay .info,
+.team .image3:hover .overlay .info,
+.team .image4:hover .overlay .info {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN OUR CLIENTS
+-------------------------------------------------------------------------*/
+.our {
+  background-color: #BFDDFE;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.style-h3 {
+  font-size: 36px;
+  color: #283d50;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+
+.pclients {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 30px;
+  color: #556877;
+  width: 50%;
+}
+
+
+
+.clientslog {
+  padding: 64px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+.clientslog .logo-cliente {
+  padding: 40px;
+  flex-basis: 18%;
+  border: 1px solid #d6eaff;
+  background: #fff;
+}
+.clientslog .logo-cliente img {
+  max-width: 100%;
+  max-height: 64px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+/*------------------------------------------------------------------------
+                            SECCIÓN Contact us
+-------------------------------------------------------------------------*/
+.contact {
+  background-color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN FOOTER
+-------------------------------------------------------------------------*/
+/* - El div "wayne" deberia empezar un poco mas abajo, en sentido vertical, que los demas. 
+Un margin-top o un display: flex, flex-direction: column, justify-content: center, serian posibles soluciones
+- Si le quitamos el width de 40% al div de contact us, nos evitamos el problema de que los iconos se achiquen y pierdan la forma
+redonda al achicar la pantalla
+- El input esta un poco angosto. Yo haria que label fuera flex, y le daria al input type email flex 2, y al input submit flex 1 para que siempre
+ocupen el 100% del label y se vean mas anchos. Esto tambien soluciona el problema de que se pongan uno debajo del otro en algunas resoluciones. 
+- En resoluciones de entre 600 y 900px, las columnas 1 y 2, y las columnas 3 y 4, se ven muy juntas entre si. Quiza un margin en
+la media query pueda ser una solucion sencilla. En esa misma resolucion, hay muy poco aire en la caja en el bottom. Un padding 
+haria que se viera mucho mejor. 
+- Atencion a los iconos en resoluciones menores a 600px: no deberian ocupar el 100% del ancho, sino quedar ubicados a la izquierda
+- El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
+el estilo de un elemento en particular. 
+*/
+/*
+body {
+    margin: 0
+}
+footer {
+    color: white;
+    background-color: #004A99;
+    height: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 8px 10px;
+    display: flex;
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.parte1 {
+    display: flex;
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+h2 {
+    margin-top: 5%;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+.columna1 {
+    width: 80%;
+}
+.columna3 {
+    width: 40%;
+}
+.image {
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding-right: 0%;
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.icon:hover {
+    background-color: #0062CC;
+}
+.columna4 {
+    width: 53%;
+    letter-spacing: 0.001em;
+}
+span {
+    font-weight: bold;
+}
+.copyright {
+    background-color: #00428A;
+    height: 150px;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 2;
+}
+a:link {
+    text-decoration: none;
+    color: $color2;
+}
+a:visited {
+    text-decoration: none;
+    color: $color2;
+    }
+input {
+    border: none;
+    padding: 0;
+    height: 33px;
+}
+.submit-button {
+    background-color: #007BFF;
+    border: none;
+    padding: 0;
+    height: 33px;
+    width: 90px;
+    color: #fff;
+}
+input[type=submit]:hover {
+    background-color: #0062CC;
+}
+.copyright {
+    background-color: #00428A;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.parte1 {
+    display: flex;
+}
+.columna1 {
+    flex: 1;
+}
+.columna2 {
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+.columna3 {
+    flex: 1;
+}
+.columna4 {
+    flex: 1;
+}
+.copyright {
+    height: 100%;
+}
+input,
+.s {
+    height: 33px;
+}
+@media (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: smaller;
+        height: 100%;
+    }
+    .parte1 {
+        flex-wrap: wrap;
+    }
+    .parte2 {
+        flex-wrap: wrap;
+    }
+    .Columna1 {
+        width: 100%;
+    }
+    .Columna2 {
+        width: 100%;
+    }
+    .Columna3 {
+        width: 100%;
+    }
+    .Columna4 {
+        width: 100%;
+    }
+    .copyright {
+        font-size: 11px;
+        height: 100%;
+    }
+}
+.copyright span {
+    font-weight: bold
+}
+*/
+/*------------------------------------------------------------------------
+                            SECCIÓN RESPONSIVE
+-------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------
+                            MEDIA QUERY FOR WHY CHOOSE US
+-------------------------------------------------------------------------*/
+@media (max-width: 800px) {
+  .whyUs {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .whyUs h3 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .whyUs .top {
+    font-size: 15px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .whyUs .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .whyUs .card-container .card {
+    width: 90%;
+    height: 100%;
+    border-radius: 3%;
+    margin: 15px;
+    padding: 35px 35px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+  }
+  .whyUs .card-container .card .body {
+    padding: 0.2em 0.1em 0.1em 0.5em;
+    margin: 1em;
+  }
+  .whyUs .card-container .card .body h5 {
+    font-size: 22px;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+  .whyUs .card-container .card .body p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #BFDDFE;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .whyUs .card-container .card .body #readmore {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 0.1em;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+  .whyUs .card:hover #readmore {
+    width: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .whyUs .card-container .card:hover #readmore {
+    width: 35%;
+  }
+}
+
+@media (max-width: 800px) {
+  .whyUs .numbers {
+    padding: 35px 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .whyUs .numbers #arriba {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .whyUs .numbers #abajo {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .whyUs .numbers .stats .title {
+    font-weight: 700;
+    font-size: 48px;
+    color: #fff;
+    margin: 0;
+  }
+  .whyUs .numbers .stats .element {
+    font-size: 15px;
+    color: #BFDDFE;
+    margin: 0;
+  }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY TABLET FOR TEAM
+-------------------------------------------------------------------------*/
+@media (min-width: 801px) and (max-width: 1024px) {
+  .team {
+    padding-bottom: 0.1em;
+  }
+  .team h3 {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  .team .top {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .team .team-section {
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .team .image1, .team .image2, .team .image3, .team .image4 {
+    height: 200px;
+    height: 200px;
+    padding: 0.1em;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .team {
+    padding-bottom: 0.1em;
+  }
+  .team h3 {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  .team .top {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .team .team-section {
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .team .team-section #sup {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    margin-bottom: 1em;
+  }
+  .team .team-section #bottom {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+  .team .team-section .image1, .team .team-section .image2, .team .team-section .image3, .team .team-section .image4 {
+    height: 315px;
+  }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY CEL FOR TEAM
+-------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+  .team {
+    padding-bottom: 0.1em;
+  }
+  .team h3 {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  .team .top {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .team .team-section {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .team .team-section .image1, .team .team-section .image2, .team .team-section .image3, .team .team-section .image4 {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 0.5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

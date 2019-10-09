@@ -277,11 +277,11 @@ nav img {
   z-index: 99;
 }
 
-.testimonials #i1:checked ~ #nav_dots #dot1,
-.testimonials #i2:checked ~ #nav_dots #dot2,
-.testimonials #i3:checked ~ #nav_dots #dot3,
-.testimonials #i4:checked ~ #nav_dots #dot4,
-.testimonials #i5:checked ~ #nav_dots #dot5 {
+.testimonials #i1:checked ~ #nav-dots #dot1,
+.testimonials #i2:checked ~ #nav-dots #dot2,
+.testimonials #i3:checked ~ #nav-dots #dot3,
+.testimonials #i4:checked ~ #nav-dots #dot4,
+.testimonials #i5:checked ~ #nav-dots #dot5 {
   background-color: #007BFF;
 }
 

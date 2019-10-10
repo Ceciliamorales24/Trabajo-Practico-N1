@@ -1,11 +1,1058 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-$color:blue;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
-    body{
-        background-color: $color;
-        font-family: 'Montserrat', sans-serif;
+$color1: #004A99;
+$color2: #fff;
+$color3: #00458f;
+$color4: #BFDDFE;
+$color5: #003B7A;
+$color6: rgba(20, 65, 110, 0.01);
+$color7: #0062CC;
+$color8: #283d50;
+$color-azul:#004289;
+$color-azul-hover:#007BFF;
+$color9: rgba(138, 136, 136, 0.685);
+$color10: rgba(46, 45, 45, 0.925); 
+$letraPar: 15px;
+$letraParch: 10px;
+$letraH3: 36px;
+$letraH5: 22px;
+$marginMM: 1.4em;
+$marginMedium: 1em;
+$marginSmall: 0.5em;
+$marginSmaller: 0.2em;
+$marginSmallerer: 0.1em;
+$fontCard: 'Open Sans', sans-serif;
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    // background-color: $color1;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*------------------------------------------------------------------------
+                            SECCIÓN header
+-------------------------------------------------------------------------*/
+
+.header {
+    color: $color-azul;
+    background-color: $color2;
+    height: 80px;
+
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        /*Flex a los elementos li, para que se ubiquen uno al lado del otro y sean flexibles. Pero tambien le tengo que decir display flex a mi nav , para que la img que está conenida por nav se alinea tambien junto con las listas*/
+        display: flex;
+
+        li {
+            padding: 20px;
+
+            a {
+                text-decoration: none;
+            }
+
+            /* No aplico un font-weight porque 
+            la medida estandar utilizada es de 500, la cual se 
+            le aplica por defecto */
+
+
+            /*a:visited {
+                    color: $color-azul; 
+                    /*REVISAR ESTO PORQUE NO SE APLICA EL HOVER Y EL VISITED
+                }*/
         }
 
-    nav ul li{
-        list-style-type: none;
+        li a:hover {
+            color: $color-azul-hover;
+
+        }
+        a:visited {
+            color: $color-azul;
+
+        }
     }
+}
+
+/*tampoco le doy display:flex al header porque no me ubica en flex a los elementos a contenidos en li. por lo tanto tengo que asignar el display li a la class"menu" la cual contiene a mis elementos li a{*/
+
+
+nav {
+    /*Flex*/
+    display: flex;
+    justify-content: space-around;
+    padding: 7px;
+
+    /*Le doy display flex a mi nav para que img pueda ser ubicado al lado de los li*/
+
+    img {
+        height: 26px;
+        width: 67px;
+        padding: 20px;
+    }
+}
+
+
+
+/*------------------------------------------------------------------------
+                            SECCIÓN WHY CHOOSE US
+-------------------------------------------------------------------------*/
+.whyUs {
+    background-color: $color1;
+    color: $color2;
+    text-align: center;
+    padding-top: 25px;
+
+    h3 {
+        font-size: $letraH3;
+        font-weight: 600;
+    }
+
+    .top {
+        font-size: $letraPar;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
+    .card-container {
+        padding: 35px 12%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .card {
+            width: 300px;
+            height: 280px;
+            border-radius: 5%;
+            background-color: $color3;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 35px 25px 15px;
+            display: flex;
+            flex-direction: column;
+            font-family: $fontCard;
+
+            i {
+                color: $color4;
+                font-size: 48px;
+            }
+
+            .body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                h5 {
+                    font-size: $letraH5;
+                    margin-top: $marginMedium;
+                    margin-bottom: $marginSmall;
+                }
+
+                p {
+                    font-size: $letraPar;
+                    font-weight: 400;
+                    line-height: 22.5px;
+                    color: $color4;
+                    margin-bottom: $marginMedium;
+                }
+
+                #readmore {
+                    display: block;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $color2;
+                    line-height: 35px;
+                    margin-top: $marginMedium;
+                    margin-bottom: $marginSmall;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .card:hover {
+        background-color: $color5;
+
+        #readmore {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            border-bottom: 2px solid $color1;
+        }
+
+        #readmore:hover {
+            border-bottom: 2px solid $color2;
+        }
+    }
+
+    .numbers {
+        padding: 35px 12%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .stats {
+            flex: 1;
+
+            .title {
+                font-weight: 700;
+                font-size: 48px;
+                color: $color2;
+                margin: 0;
+            }
+
+            .element {
+                font-size: 15px;
+                color: $color4;
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN TESTIMONIALS
+-------------------------------------------------------------------------*/
+.testimonials {
+    background-color: #ECF5FF;
+    text-align: center;
+
+    height: 450px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
+    position: relative;
+    user-select: none;
+    
+    input {
+        display: none;
+    }
+     
+    h3 {
+        font-size: $letraH3;
+        font-weight: 600;
+        color: #283D50;
+
+        margin-bottom: $marginSmallerer;
+    }
+    
+    .slide-img {
+        position: absolute;
+        left: 15%;
+            z-index: -1;
+        }
+    
+    
+    #nav-dots {
+        width: 100%;
+        height: 80px;
+        top: 400px;
+        left: 0px;
+        position: absolute;
+        display: inline-block;
+        // padding-bottom: 10px;
+        text-align: center;
+        z-index: 99;
+        cursor: default;
+        
+        .dots {
+            
+            width: 25px;
+            height: 25px;
+            margin: 0 3px;
+            background-color: $color9;
+            border-radius: 100%;
+            position: relative;
+            display: inline-block;
+            // bottom: 55px;
+            cursor: pointer;
+        }
+    }
+
+    #i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three, #i4:checked ~ #four, #i5:checked ~ #five {
+        display: block;
+        z-index: 99;
+    }
+
+    #i1:checked ~ #nav-dots #dot1, 
+    #i2:checked ~ #nav-dots #dot2,
+    #i3:checked ~ #nav-dots #dot3,
+    #i4:checked ~ #nav-dots #dot4,
+    #i5:checked ~ #nav-dots #dot5 {
+        background-color: $color-azul-hover;
+    }
+}
+
+
+
+/*------------------------------------------------------------------------
+                            SECCIÓN TEAM
+-------------------------------------------------------------------------*/
+
+.team {
+    background-color: $color2;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    h3 {
+        font-size: $letraH3;
+        font-weight: 600;
+        color: #283D50;
+    }
+
+    .top {
+        font-size: $letraPar;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
+    .team-section {
+        padding: 35px 210px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .image1,
+        .image2,
+        .image3,
+        .image4 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-size: cover;
+            overflow: hidden;
+            z-index: 1;
+            font-family: $fontCard;
+        }
+        
+        .image1 {
+            background-image: url("img/team-01.jpg");
+        }
+
+        .image2 {
+            background-image: url("img/team-02.jpg");
+        }
+
+        .image3 {
+            background-image: url("img/team-03.jpg");
+        }
+
+        .image4 {
+            background-image: url("img/team-04.jpg");
+        }
+
+        .overlay {
+            height: 100%;
+            border-radius: 50%;
+            background-image: linear-gradient(rgba(15, 94, 173, 0.616), rgba(15, 94, 173, 0.616));
+            display: flex;
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+            color: $color2;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.5s, opacity 0.5s linear;
+
+            .info {
+                transform: translateY(300px);
+                transition: transform 0.5s;
+
+                h4 {
+                    padding-top: 0;
+                    margin-top: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    padding-top: 0;
+                    margin-top: 0;
+                    font-style: italic;
+                    font-size: 15px;
+                }
+
+                .icon-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $color2;
+
+                    .icon {
+                        width: 15px;
+                        height: 15px;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                    }
+
+                    .icon a:hover {
+                        color: $color7;
+                    }
+
+                    a:link {
+                        text-decoration: none;
+                        color: $color2;
+                    }
+
+                    a:visited {
+                        text-decoration: none;
+                        color: $color2;
+                    }
+                }
+            }
+        }
+    }
+
+    .image1:hover .overlay,
+    .image2:hover .overlay,
+    .image3:hover .overlay,
+    .image4:hover .overlay {
+        visibility: visible;
+        opacity: 1;
+
+        .info {
+            transform: translateX(0);
+        }
+    }
+}
+
+
+/*------------------------------------------------------------------------
+                            SECCIÓN OUR CLIENTS
+-------------------------------------------------------------------------*/
+.our {
+    background-color: $color4;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.style-h3 {
+    font-size: 36px;
+    color: #283d50;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+}
+.pclients {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 30px;
+    color: #556877;
+    width: 50%;
+}
+
+.clientslog {
+    padding: 64px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    //width: 50px;
+
+    .logo-cliente {
+        padding: 40px;
+        flex-basis:18%;
+        border: 1px solid #d6eaff;
+        background: $color2;
+
+        img{
+            max-width: 100%;
+            max-height: 64px;
+        }
+    }
+
+}
+/*------------------------------------------------------------------------
+                            SECCIÓN Contact us
+-------------------------------------------------------------------------*/
+
+.contact {
+    background-color: $color2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    .style-h3{
+        display: block;
+        width: 100%;
+    }
+}
+
+/*------------------------------------------------------------------------
+                            SECCIÓN FOOTER
+-------------------------------------------------------------------------*/
+/* - El div "wayne" deberia empezar un poco mas abajo, en sentido vertical, que los demas. 
+Un margin-top o un display: flex, flex-direction: column, justify-content: center, serian posibles soluciones
+- Si le quitamos el width de 40% al div de contact us, nos evitamos el problema de que los iconos se achiquen y pierdan la forma
+redonda al achicar la pantalla
+- El input esta un poco angosto. Yo haria que label fuera flex, y le daria al input type email flex 2, y al input submit flex 1 para que siempre
+ocupen el 100% del label y se vean mas anchos. Esto tambien soluciona el problema de que se pongan uno debajo del otro en algunas resoluciones. 
+- En resoluciones de entre 600 y 900px, las columnas 1 y 2, y las columnas 3 y 4, se ven muy juntas entre si. Quiza un margin en
+la media query pueda ser una solucion sencilla. En esa misma resolucion, hay muy poco aire en la caja en el bottom. Un padding 
+haria que se viera mucho mejor. 
+- Atencion a los iconos en resoluciones menores a 600px: no deberian ocupar el 100% del ancho, sino quedar ubicados a la izquierda
+- El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
+el estilo de un elemento en particular. 
+*/
+/*
+body {
+    margin: 0
+}
+footer {
+    color: white;
+    background-color: #004A99;
+    height: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 8px 10px;
+    display: flex;
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.parte1 {
+    display: flex;
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+h2 {
+    margin-top: 5%;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+.columna1 {
+    width: 80%;
+}
+.columna3 {
+    width: 40%;
+}
+.image {
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding-right: 0%;
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.icon:hover {
+    background-color: #0062CC;
+}
+.columna4 {
+    width: 53%;
+    letter-spacing: 0.001em;
+}
+span {
+    font-weight: bold;
+}
+.copyright {
+    background-color: #00428A;
+    height: 150px;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 2;
+}
+a:link {
+    text-decoration: none;
+    color: $color2;
+}
+a:visited {
+    text-decoration: none;
+    color: $color2;
+    }
+input {
+    border: none;
+    padding: 0;
+    height: 33px;
+}
+.submit-button {
+    background-color: #007BFF;
+    border: none;
+    padding: 0;
+    height: 33px;
+    width: 90px;
+    color: #fff;
+}
+input[type=submit]:hover {
+    background-color: #0062CC;
+}
+.copyright {
+    background-color: #00428A;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.parte1 {
+    display: flex;
+}
+.columna1 {
+    flex: 1;
+}
+.columna2 {
+    flex: 1;
+}
+.parte2 {
+    display: flex;
+    flex: 1;
+}
+.columna3 {
+    flex: 1;
+}
+.columna4 {
+    flex: 1;
+}
+.copyright {
+    height: 100%;
+}
+input,
+.s {
+    height: 33px;
+}
+@media (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: smaller;
+        height: 100%;
+    }
+    .parte1 {
+        flex-wrap: wrap;
+    }
+    .parte2 {
+        flex-wrap: wrap;
+    }
+    .Columna1 {
+        width: 100%;
+    }
+    .Columna2 {
+        width: 100%;
+    }
+    .Columna3 {
+        width: 100%;
+    }
+    .Columna4 {
+        width: 100%;
+    }
+    .copyright {
+        font-size: 11px;
+        height: 100%;
+    }
+}
+.copyright span {
+    font-weight: bold
+}
+*/
+
+/*------------------------------------------------------------------------
+                            SECCIÓN RESPONSIVE
+-------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY FOR WHY CHOOSE US
+-------------------------------------------------------------------------*/
+
+@media (max-width: 800px) {
+    .whyUs {
+        padding-left: 2%;
+        padding-right: 2%;
+
+        h3 {
+            font-size: $letraH3;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .top {
+            font-size: $letraPar;
+            text-align: center;
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+            .card {
+                width: 90%;
+                height: 100%;
+                border-radius: 3%;
+                margin: 15px;
+                padding: 35px 35px 0;
+                display: flex;
+                flex-direction: column;
+                font-family: $fontCard;
+            
+                .body {
+                padding: $marginSmaller $marginSmallerer $marginSmallerer $marginSmall;
+                margin: $marginMedium;
+                    h5 {
+                        font-size: $letraH5;
+                        margin-top: $marginSmall;
+                        margin-bottom: 0;
+                    }
+                    p {
+                        font-size: $letraPar;
+                        font-weight: 400;
+                        color: $color4;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                    #readmore {
+                        display: block;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: $color2;
+                        margin-top: $marginSmallerer;
+                        margin-bottom: 0;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .card:hover {
+            #readmore {
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .whyUs .card-container .card:hover {
+        #readmore {
+            width: 35%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .whyUs .numbers {
+        padding: 35px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        #arriba {
+            flex-basis: 40%;
+        }
+
+        #abajo {
+            flex-basis: 40%;
+        }
+
+        .stats {
+            .title {
+                font-weight: 700;
+                font-size: 48px;
+                color: $color2;
+                margin: 0;
+            }
+
+            .element {
+                font-size: 15px;
+                color: $color4;
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY TABLET FOR TEAM
+-------------------------------------------------------------------------*/
+@media (min-width: 801px) and (max-width: 1024px) {
+.team {
+    padding-bottom: $marginSmallerer;
+        h3 {
+            margin-top: $marginSmallerer;
+            margin-bottom: $marginSmallerer;
+        }
+        .top {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .team-section {
+            padding-left: $marginMM;
+            padding-right: $marginMM;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+            
+        .image1, .image2, .image3, .image4 {
+            height: 200px;
+            height: 200px;
+            padding: $marginSmallerer;
+        }
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .team {
+    padding-bottom: $marginSmallerer;
+        h3 {
+            margin-top: $marginSmallerer;
+            margin-bottom: $marginSmallerer;
+        }
+        .top {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .team-section {
+            padding-left: $marginMM;
+            padding-right: $marginMM;
+            display: flex;
+            flex-wrap: wrap;
+            
+            #sup {
+                flex-basis: 47%;
+                margin-bottom: $marginMedium;
+            }
+            #bottom {
+                flex-basis: 47%;
+            }
+            .image1, .image2, .image3, .image4 {
+                height: 315px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY CEL FOR TEAM
+-------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+    .team {
+        padding-bottom: $marginSmallerer;
+        h3 {
+            margin-top: $marginSmallerer;
+            margin-bottom: $marginSmallerer;
+        }
+        .top {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+        .team-section {
+            padding-left: $marginSmallerer;
+            padding-right: $marginSmallerer;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+                   
+            .image1, .image2, .image3, .image4 {
+                width: 400px;
+                height: 400px;
+                margin-bottom: $marginSmall;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY CEL FOR TESTIMONIALS //
+                            SOLO SE VE LA PRIMERA CARD
+-------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+    .testimonials {
+        background-color: #ECF5FF;
+        text-align: center;
+        height: 450px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
+        position: relative;
+        user-select: none;
+    
+        input {
+            display: none;
+        }
+     
+        h3 {
+            font-size: $letraH3;
+            font-weight: 600;
+            color: #283D50;
+            margin-bottom: $marginSmallerer;
+        }
+    
+        .slide-img {
+            width: 500px;
+            height: 120px;
+            text-align: center;
+            position: absolute;
+            margin-left: -90px;
+            z-index: -1;
+            background-image: url("img/testimonial-card-1_cel.png");
+            background-size: cover;
+            img {
+                display: none;
+            }
+            }
+    
+    
+        #nav-dots {
+            width: 100%;
+            height: 80px;
+            top: 400px;
+            left: 0px;
+            position: absolute;
+            display: inline-block;
+            text-align: center;
+            z-index: 99;
+            cursor: default;
+        
+            .dots {
+                width: 25px;
+                height: 25px;
+                margin: 0 3px;
+                background-color: $color9;
+                border-radius: 100%;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+
+        #i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three, #i4:checked ~ #four, #i5:checked ~ #five {
+            display: block;
+            z-index: 99;
+        }
+
+        #i1:checked ~ #nav-dots #dot1, 
+        #i2:checked ~ #nav-dots #dot2,
+        #i3:checked ~ #nav-dots #dot3,
+        #i4:checked ~ #nav-dots #dot4,
+        #i5:checked ~ #nav-dots #dot5 {
+            background-color: $color-azul-hover;
+        }
+    }
+}
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY TABLET FOR TESTIMONIALS //
+                            SOLO SE VE LA PRIMERA CARD
+-------------------------------------------------------------------------*/
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .testimonials {
+        background-color: #ECF5FF;
+        text-align: center;
+        height: 450px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
+        position: relative;
+        user-select: none;
+    
+        input {
+            display: none;
+        }
+     
+        h3 {
+            font-size: $letraH3;
+            font-weight: 600;
+            color: #283D50;
+            margin-bottom: $marginSmallerer;
+        }
+    
+        .slide-img {
+            width: 650px;
+            height: 160px;
+            text-align: center;
+            position: absolute;
+            margin-left: -90px;
+            z-index: -1;
+            background-image: url("img/testimonial-card-1_tablet.png");
+            background-size: cover;
+            img {
+                display: none;
+            }
+        }
+    
+    
+        #nav-dots {
+            width: 100%;
+            height: 80px;
+            top: 400px;
+            left: 0px;
+            position: absolute;
+            display: inline-block;
+            text-align: center;
+            z-index: 99;
+            cursor: default;
+        
+            .dots {
+                width: 25px;
+                height: 25px;
+                margin: 0 3px;
+                background-color: $color9;
+                border-radius: 100%;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+
+        #i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three, #i4:checked ~ #four, #i5:checked ~ #five {
+            display: block;
+            z-index: 99;
+        }
+
+        #i1:checked ~ #nav-dots #dot1, 
+        #i2:checked ~ #nav-dots #dot2,
+        #i3:checked ~ #nav-dots #dot3,
+        #i4:checked ~ #nav-dots #dot4,
+        #i5:checked ~ #nav-dots #dot5 {
+            background-color: $color-azul-hover;
+        }
+    }
+}

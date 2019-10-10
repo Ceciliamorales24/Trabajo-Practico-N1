@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+$color1: #004A99;
+$color2: #fff;
+$color3: #00458f;
+$color4: #BFDDFE;
+$color5: #003B7A;
+$color6: rgba(20, 65, 110, 0.01);
+$color7: #0062CC;
+$color8: #283d50;
+$color-azul:#004289;
+$color-azul-hover:#007BFF;
+$color9: rgba(138, 136, 136, 0.685);
+$color10: rgba(46, 45, 45, 0.925); 
+$letraPar: 15px;
+$letraParch: 10px;
+$letraH3: 36px;
+$letraH5: 22px;
+$marginMM: 1.4em;
+$marginMedium: 1em;
+$marginSmall: 0.5em;
+$marginSmaller: 0.2em;
+$marginSmallerer: 0.1em;
+$fontCard: 'Open Sans', sans-serif;
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    // background-color: $color1;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/*------------------------------------------------------------------------
+                            SECCIÓN TESTIMONIALS // 
+                        SOLO SCSS PARA CREAR LAS CARDS INCLUIDAS
+                        EN EL CARRUSEL DE TESTIMONIALS
+-------------------------------------------------------------------------*/
+.testimonials {
+    background-color: #ECF5FF;
+    text-align: center;
+    height: 1500px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
+    
+
+    h3 {
+        font-size: $letraH3;
+        font-weight: 600;
+        color: #283D50;
+        margin-bottom: $marginSmallerer;
+    }
+    
+    #text-card {
+        height: 250px;
+        padding: 5px 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .image {
+            width: 120px;
+            height: 120px;
+            margin: 15px;
+            border-radius: 50%;
+            background-size: cover;
+            overflow: hidden;
+           
+        }
+        #image1 {
+            background-image: url("img/testimonial-1.jpg");
+        }
+
+        #image2 {
+            background-image: url("img/testimonial-2.jpg");
+        }
+
+        #image3 {
+            background-image: url("img/testimonial-3.jpg");
+        }
+
+        #image4 {
+            background-image: url("img/testimonial-4.jpg");
+        }
+
+        #image5 {
+            background-image: url("img/testimonial-5.jpg");
+        }
+
+        .text {
+            flex: 3;
+            text-align: left;
+            
+
+            h4 {
+                margin-top: $marginSmallerer;
+                margin-bottom: $marginSmallerer;
+            }
+            .subtitle {
+                font-size: 14px;
+                color:$color9;
+                margin-top: $marginSmallerer;
+            }
+
+            p {
+                color: $color10;
+                font-style: italic;
+            }
+        }
+    
+    }
+}
+

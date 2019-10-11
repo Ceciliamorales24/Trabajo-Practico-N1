@@ -334,19 +334,19 @@ nav img {
 }
 
 .team .team-section .image1 {
-  background-image: url("/img/team-01.jpg");
+  background-image: url("../img/team-01.jpg");
 }
 
 .team .team-section .image2 {
-  background-image: url("/img/team-02.jpg");
+  background-image: url("../img/team-02.jpg");
 }
 
 .team .team-section .image3 {
-  background-image: url("/img/team-03.jpg");
+  background-image: url("../img/team-03.jpg");
 }
 
 .team .team-section .image4 {
-  background-image: url("/img/team-04.jpg");
+  background-image: url("../img/team-04.jpg");
 }
 
 .team .team-section .overlay {

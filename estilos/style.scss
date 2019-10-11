@@ -12,7 +12,7 @@ $color8: #283d50;
 $color-azul:#004289;
 $color-azul-hover:#007BFF;
 $color9: rgba(138, 136, 136, 0.685);
-$color10: rgba(46, 45, 45, 0.925); 
+$color10: rgba(46, 45, 45, 0.925);
 $letraPar: 15px;
 $letraParch: 10px;
 $letraH3: 36px;
@@ -22,7 +22,8 @@ $marginMedium: 1em;
 $marginSmall: 0.5em;
 $marginSmaller: 0.2em;
 $marginSmallerer: 0.1em;
-$fontCard: 'Open Sans', sans-serif;
+$fontCard: 'Open Sans',
+sans-serif;
 
 
 * {
@@ -76,6 +77,7 @@ body {
             color: $color-azul-hover;
 
         }
+
         a:visited {
             color: $color-azul;
 
@@ -233,11 +235,11 @@ nav {
     box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
     position: relative;
     user-select: none;
-    
+
     input {
         display: none;
     }
-     
+
     h3 {
         font-size: $letraH3;
         font-weight: 600;
@@ -245,14 +247,14 @@ nav {
 
         margin-bottom: $marginSmallerer;
     }
-    
+
     .slide-img {
         position: absolute;
         left: 15%;
-            z-index: -1;
-        }
-    
-    
+        z-index: -1;
+    }
+
+
     #nav-dots {
         width: 100%;
         height: 80px;
@@ -264,9 +266,9 @@ nav {
         text-align: center;
         z-index: 99;
         cursor: default;
-        
+
         .dots {
-            
+
             width: 25px;
             height: 25px;
             margin: 0 3px;
@@ -279,16 +281,20 @@ nav {
         }
     }
 
-    #i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three, #i4:checked ~ #four, #i5:checked ~ #five {
+    #i1:checked~#one,
+    #i2:checked~#two,
+    #i3:checked~#three,
+    #i4:checked~#four,
+    #i5:checked~#five {
         display: block;
         z-index: 99;
     }
 
-    #i1:checked ~ #nav-dots #dot1, 
-    #i2:checked ~ #nav-dots #dot2,
-    #i3:checked ~ #nav-dots #dot3,
-    #i4:checked ~ #nav-dots #dot4,
-    #i5:checked ~ #nav-dots #dot5 {
+    #i1:checked~#nav-dots #dot1,
+    #i2:checked~#nav-dots #dot2,
+    #i3:checked~#nav-dots #dot3,
+    #i4:checked~#nav-dots #dot4,
+    #i5:checked~#nav-dots #dot5 {
         background-color: $color-azul-hover;
     }
 }
@@ -335,7 +341,7 @@ nav {
             z-index: 1;
             font-family: $fontCard;
         }
-        
+
         .image1 {
             background-image: url("img/team-01.jpg");
         }
@@ -444,6 +450,7 @@ nav {
     font-weight: 500;
     position: relative;
 }
+
 .pclients {
     text-align: center;
     margin: auto;
@@ -466,17 +473,18 @@ nav {
 
     .logo-cliente {
         padding: 40px;
-        flex-basis:18%;
+        flex-basis: 18%;
         border: 1px solid #d6eaff;
         background: $color2;
 
-        img{
+        img {
             max-width: 100%;
             max-height: 64px;
         }
     }
 
 }
+
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/
@@ -487,28 +495,41 @@ nav {
     display: flex;
     align-items: center;
 
-    .style-h3{
+    .style-h3 {
         display: block;
         width: 100%;
     }
+
+    .contact-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    
+        .col-cont-bdy {
+            display: flex;
+            
+        
+            .map {
+            display: flex;
+             justify-content: flex-start;
+            align-items: left;
+            /*overflow: hidden;*/
+            flex-wrap: wrap;
+            }
+        .formulario {
+            .info-row {
+
+            }
+        
+        }  
+         }
+     }
 }
 
 /*------------------------------------------------------------------------
                             SECCIÓN FOOTER
 -------------------------------------------------------------------------*/
-/* - El div "wayne" deberia empezar un poco mas abajo, en sentido vertical, que los demas. 
-Un margin-top o un display: flex, flex-direction: column, justify-content: center, serian posibles soluciones
-- Si le quitamos el width de 40% al div de contact us, nos evitamos el problema de que los iconos se achiquen y pierdan la forma
-redonda al achicar la pantalla
-- El input esta un poco angosto. Yo haria que label fuera flex, y le daria al input type email flex 2, y al input submit flex 1 para que siempre
-ocupen el 100% del label y se vean mas anchos. Esto tambien soluciona el problema de que se pongan uno debajo del otro en algunas resoluciones. 
-- En resoluciones de entre 600 y 900px, las columnas 1 y 2, y las columnas 3 y 4, se ven muy juntas entre si. Quiza un margin en
-la media query pueda ser una solucion sencilla. En esa misma resolucion, hay muy poco aire en la caja en el bottom. Un padding 
-haria que se viera mucho mejor. 
-- Atencion a los iconos en resoluciones menores a 600px: no deberian ocupar el 100% del ancho, sino quedar ubicados a la izquierda
-- El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
-el estilo de un elemento en particular. 
-*/
+
 /*
 body {
     margin: 0
@@ -706,12 +727,14 @@ input,
             text-align: center;
             margin-bottom: 0;
         }
+
         .top {
             font-size: $letraPar;
             text-align: center;
             padding-left: 25%;
             padding-right: 25%;
         }
+
         .card-container {
             display: flex;
             flex-direction: column;
@@ -719,7 +742,7 @@ input,
             margin: 5px;
             padding-left: 15px;
             padding-right: 15px;
-            
+
             .card {
                 width: 90%;
                 height: 100%;
@@ -729,15 +752,17 @@ input,
                 display: flex;
                 flex-direction: column;
                 font-family: $fontCard;
-            
+
                 .body {
-                padding: $marginSmaller $marginSmallerer $marginSmallerer $marginSmall;
-                margin: $marginMedium;
+                    padding: $marginSmaller $marginSmallerer $marginSmallerer $marginSmall;
+                    margin: $marginMedium;
+
                     h5 {
                         font-size: $letraH5;
                         margin-top: $marginSmall;
                         margin-bottom: 0;
                     }
+
                     p {
                         font-size: $letraPar;
                         font-weight: 400;
@@ -745,6 +770,7 @@ input,
                         margin-bottom: 0;
                         padding-bottom: 0;
                     }
+
                     #readmore {
                         display: block;
                         font-weight: 600;
@@ -757,6 +783,7 @@ input,
                 }
             }
         }
+
         .card:hover {
             #readmore {
                 width: 25%;
@@ -810,16 +837,19 @@ input,
                             MEDIA QUERY TABLET FOR TEAM
 -------------------------------------------------------------------------*/
 @media (min-width: 801px) and (max-width: 1024px) {
-.team {
-    padding-bottom: $marginSmallerer;
+    .team {
+        padding-bottom: $marginSmallerer;
+
         h3 {
             margin-top: $marginSmallerer;
             margin-bottom: $marginSmallerer;
         }
+
         .top {
             padding-left: 25%;
             padding-right: 25%;
         }
+
         .team-section {
             padding-left: $marginMM;
             padding-right: $marginMM;
@@ -827,8 +857,11 @@ input,
             justify-content: space-between;
             flex-wrap: nowrap;
         }
-            
-        .image1, .image2, .image3, .image4 {
+
+        .image1,
+        .image2,
+        .image3,
+        .image4 {
             height: 200px;
             height: 200px;
             padding: $marginSmallerer;
@@ -839,29 +872,37 @@ input,
 
 @media (min-width: 601px) and (max-width: 800px) {
     .team {
-    padding-bottom: $marginSmallerer;
+        padding-bottom: $marginSmallerer;
+
         h3 {
             margin-top: $marginSmallerer;
             margin-bottom: $marginSmallerer;
         }
+
         .top {
             padding-left: 25%;
             padding-right: 25%;
         }
+
         .team-section {
             padding-left: $marginMM;
             padding-right: $marginMM;
             display: flex;
             flex-wrap: wrap;
-            
+
             #sup {
                 flex-basis: 47%;
                 margin-bottom: $marginMedium;
             }
+
             #bottom {
                 flex-basis: 47%;
             }
-            .image1, .image2, .image3, .image4 {
+
+            .image1,
+            .image2,
+            .image3,
+            .image4 {
                 height: 315px;
             }
         }
@@ -874,22 +915,28 @@ input,
 @media (max-width: 600px) {
     .team {
         padding-bottom: $marginSmallerer;
+
         h3 {
             margin-top: $marginSmallerer;
             margin-bottom: $marginSmallerer;
         }
+
         .top {
             padding-left: 25%;
             padding-right: 25%;
         }
+
         .team-section {
             padding-left: $marginSmallerer;
             padding-right: $marginSmallerer;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-                   
-            .image1, .image2, .image3, .image4 {
+
+            .image1,
+            .image2,
+            .image3,
+            .image4 {
                 width: 400px;
                 height: 400px;
                 margin-bottom: $marginSmall;
@@ -912,18 +959,18 @@ input,
         box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
         position: relative;
         user-select: none;
-    
+
         input {
             display: none;
         }
-     
+
         h3 {
             font-size: $letraH3;
             font-weight: 600;
             color: #283D50;
             margin-bottom: $marginSmallerer;
         }
-    
+
         .slide-img {
             width: 500px;
             height: 120px;
@@ -933,12 +980,13 @@ input,
             z-index: -1;
             background-image: url("img/testimonial-card-1_cel.png");
             background-size: cover;
+
             img {
                 display: none;
             }
-            }
-    
-    
+        }
+
+
         #nav-dots {
             width: 100%;
             height: 80px;
@@ -949,7 +997,7 @@ input,
             text-align: center;
             z-index: 99;
             cursor: default;
-        
+
             .dots {
                 width: 25px;
                 height: 25px;
@@ -962,16 +1010,20 @@ input,
             }
         }
 
-        #i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three, #i4:checked ~ #four, #i5:checked ~ #five {
+        #i1:checked~#one,
+        #i2:checked~#two,
+        #i3:checked~#three,
+        #i4:checked~#four,
+        #i5:checked~#five {
             display: block;
             z-index: 99;
         }
 
-        #i1:checked ~ #nav-dots #dot1, 
-        #i2:checked ~ #nav-dots #dot2,
-        #i3:checked ~ #nav-dots #dot3,
-        #i4:checked ~ #nav-dots #dot4,
-        #i5:checked ~ #nav-dots #dot5 {
+        #i1:checked~#nav-dots #dot1,
+        #i2:checked~#nav-dots #dot2,
+        #i3:checked~#nav-dots #dot3,
+        #i4:checked~#nav-dots #dot4,
+        #i5:checked~#nav-dots #dot5 {
             background-color: $color-azul-hover;
         }
     }
@@ -992,18 +1044,18 @@ input,
         box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
         position: relative;
         user-select: none;
-    
+
         input {
             display: none;
         }
-     
+
         h3 {
             font-size: $letraH3;
             font-weight: 600;
             color: #283D50;
             margin-bottom: $marginSmallerer;
         }
-    
+
         .slide-img {
             width: 650px;
             height: 160px;
@@ -1013,12 +1065,13 @@ input,
             z-index: -1;
             background-image: url("img/testimonial-card-1_tablet.png");
             background-size: cover;
+
             img {
                 display: none;
             }
         }
-    
-    
+
+
         #nav-dots {
             width: 100%;
             height: 80px;
@@ -1029,7 +1082,7 @@ input,
             text-align: center;
             z-index: 99;
             cursor: default;
-        
+
             .dots {
                 width: 25px;
                 height: 25px;
@@ -1042,16 +1095,20 @@ input,
             }
         }
 
-        #i1:checked ~ #one, #i2:checked ~ #two, #i3:checked ~ #three, #i4:checked ~ #four, #i5:checked ~ #five {
+        #i1:checked~#one,
+        #i2:checked~#two,
+        #i3:checked~#three,
+        #i4:checked~#four,
+        #i5:checked~#five {
             display: block;
             z-index: 99;
         }
 
-        #i1:checked ~ #nav-dots #dot1, 
-        #i2:checked ~ #nav-dots #dot2,
-        #i3:checked ~ #nav-dots #dot3,
-        #i4:checked ~ #nav-dots #dot4,
-        #i5:checked ~ #nav-dots #dot5 {
+        #i1:checked~#nav-dots #dot1,
+        #i2:checked~#nav-dots #dot2,
+        #i3:checked~#nav-dots #dot3,
+        #i4:checked~#nav-dots #dot4,
+        #i5:checked~#nav-dots #dot5 {
             background-color: $color-azul-hover;
         }
     }

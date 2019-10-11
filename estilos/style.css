@@ -975,7 +975,7 @@ input,
     position: absolute;
     margin-left: -90px;
     z-index: -1;
-    background-image: url("img/testimonial-card-1_cel.png");
+    background-image: url("../img/testimonial-card-1_cel.png");
     background-size: cover;
   }
   .testimonials .slide-img img {
@@ -1050,7 +1050,7 @@ input,
     position: absolute;
     margin-left: -90px;
     z-index: -1;
-    background-image: url("img/testimonial-card-1_tablet.png");
+    background-image: url("../img/testimonial-card-1_tablet.png");
     background-size: cover;
   }
   .testimonials .slide-img img {

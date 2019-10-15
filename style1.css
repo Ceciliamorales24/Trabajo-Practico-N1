@@ -1,3 +1,5 @@
+/*--- About Us Section ---*/
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -7,49 +9,55 @@ body{
     margin-right: 10%;
     text-align: left;
 }
-h3,h4 {
-    font-family: 'Montserrat', sans-serif;
+
+h2,h3,h4{
+    font-family: "Montserrat", sans-serif;
     color: #283d50;
     text-align: center;
-    font-weight: 500;
     position: relative;
 }
 
 p {
     font-family: 'Montserrat', sans-serif; 
-    color: #283d50; 
-    position: relative;
+    color: #283d50;      
 }
 
-h1,.p1{
+.about{
     text-align: center;
     margin: auto;
     font-size: 15px;
     padding-bottom: 60px;
     color: #556877;
-    width: 50%;
-        
+    width: 50%;      
 }  
 
-#texto{
-    padding: 0;
-    text-align: left;
-    color: #444;
-    font-family: "Open Sans", sans-serif;
-}
-a{   transition: 0.5s;
- text-decoration: none;
- background-color: transparent;
-}
-.container{
-    text-align: left;
-}
-.team{
-    float: right;
+.about > h3{
+    font-size: 36px;
+    color: #283d50;
+    text-align: center;
+    font-weight: 500px;
+    position: relative;
 }
 
-.box{
-    float: left;
+.flex{
+    display: flex;
+}
+
+.container{
+    text-align: left;
+    line-height: 1.5;
+}
+
+#texto{
+    margin-left: -10px;
+     text-align: left;
+     color: #444;
+     font-family: "Open Sans", sans-serif;
+     line-height: 26px;
+     margin-bottom: 30px;
+}
+ 
+.box {
     background: #fff;
     width: 64px;
     height: 64px;
@@ -62,22 +70,60 @@ a{   transition: 0.5s;
     border: 2px solid #007bff;
 }
 
-.p3{
-    padding-left: 3%;
-}
-p{
-    padding-left: 10%;
-}
-.teach{
-    vertical-align: middle;
-    height: 540px; 
-    width: 400px;
-    float:left;
+.box :hover{
+    background: #007bff;
 }
 
-.design{
-    float: right;
+.h4p{
+    margin-top: -90px;
+    margin-left: 80px;
+    text-align: left;
 }
+
+.h4p > h4{
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.h4p > p{
+    
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.team , .teach, .design{
+    display: flex;
+}
+
+.teach{
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#teach1 {
+    margin-top: -100px;
+}
+
+#teach1 > h3{
+    font-weight: 600px;
+    font-size: 36px;
+}
+
+.design > h2{
+    font-weight: 600px;
+    font-size: 36px;
+
+}
+
+img{   
+    width: 540px;
+    height: 540px;
+}
+
+/*-- Services Section--*/
+
 .service{
     text-align: center;
     padding: 60px 0 40px 0;
@@ -85,44 +131,32 @@ p{
     background: #ecf5ff;
 }
 
-img{
-    background-size: 50%;
-    width: 500px;
-    right: 400px;
-    vertical-align: middle;
+.service > h2{
+    font-size: 36px;
+    font-weight: 600px;
 }
 
-
-.p3{
-    display: inline-block;
-    text-align: left;
-    flex-direction: column;
+.service > p{
     text-align: center;
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #556877;
+    width: 50%;
 }
 
-
-.icon{
-    width: 25%;
-  height: 25%;
-  display: inline-block;
-    position: relative;
-margin-left: -950px;
-margin-bottom: 500px;
-transition: 0.5s;
-}
 
 .display{
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
 }
 
-.container{
+.display > div{
+    height: 120px;
+    width: 350px;
     text-align: left;
-}
-button {
-    display: inline-block;
-    padding: 30px;
+    padding: 50px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -130,4 +164,48 @@ button {
     background: #fff;
     box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
     transition: all 0.3s ease-in-out;
+    
+}
+
+#descripcion{
+    color: #444;
+    font-family: "Open Sans", sans-serif;
+}
+
+.display :hover{
+    color: #007bff;
+    transform: translateY(-5px);
+}
+
+.display h3{
+    margin-left: -190px;
+    color: #111;
+}
+
+.display p{
+    margin-left: 15px;
+}
+
+#icon{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -15px;
+    top: calc(50% - 32px);
+}
+
+
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 600px) {
+    
+}
+
+
+
+@media ( max-width: 800px){
+
 }

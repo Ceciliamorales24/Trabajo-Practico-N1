@@ -503,10 +503,11 @@ footer {
     color: $color2;
     width: 100%;
     background-color: $color1;
-    height: 300px;
+    height: 100%;
     font-family: $fontFooter;
     font-size: 14px;
-    padding: 8px 10px;
+    box-sizing: border-box;
+    padding: 20px 3% 35px;
     display: flex;
     line-height: 1.5;
     justify-content: space-evenly;

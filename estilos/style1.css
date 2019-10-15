@@ -1,5 +1,5 @@
 /*--- About Us Section ---*/
-
+/* 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -8,16 +8,16 @@ body{
     margin-left: 15%;
     margin-right: 10%;
     text-align: left;
-}
+} */
 
-h2,h3,h4{
+#h3about, #h4about, #h2about {
     font-family: "Montserrat", sans-serif;
     color: #283d50;
     text-align: center;
     position: relative;
 }
 
-p {
+#pabout {
     font-family: 'Montserrat', sans-serif; 
     color: #283d50;      
 }
@@ -93,7 +93,7 @@ p {
     font-size: 14px;
 }
 
-.team , .teach, .design{
+.teamAbout , .teach, .design{
     display: flex;
 }
 
@@ -117,7 +117,7 @@ p {
 
 }
 
-img{   
+.imagen {   
     width: 540px;
     height: 540px;
 }

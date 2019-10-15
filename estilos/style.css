@@ -272,7 +272,11 @@ nav img {
   cursor: pointer;
 }
 
-.testimonials #i1:checked ~ #one, .testimonials #i2:checked ~ #two, .testimonials #i3:checked ~ #three, .testimonials #i4:checked ~ #four, .testimonials #i5:checked ~ #five {
+.testimonials #i1:checked ~ #one,
+.testimonials #i2:checked ~ #two,
+.testimonials #i3:checked ~ #three,
+.testimonials #i4:checked ~ #four,
+.testimonials #i5:checked ~ #five {
   display: block;
   z-index: 99;
 }
@@ -518,6 +522,39 @@ nav img {
 .contact .style-h3 {
   display: block;
   width: 100%;
+}
+
+.contact .contact-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact .contact-body .col-cont-bdy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact-body .col-cont-bdy .map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  /*overflow: hidden;*/
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /*------------------------------------------------------------------------
@@ -840,7 +877,10 @@ footer .parte2 .columna4 .submit-button {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .team .image1, .team .image2, .team .image3, .team .image4 {
+  .team .image1,
+  .team .image2,
+  .team .image3,
+  .team .image4 {
     height: 200px;
     height: 200px;
     padding: 0.1em;
@@ -877,7 +917,10 @@ footer .parte2 .columna4 .submit-button {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
   }
-  .team .team-section .image1, .team .team-section .image2, .team .team-section .image3, .team .team-section .image4 {
+  .team .team-section .image1,
+  .team .team-section .image2,
+  .team .team-section .image3,
+  .team .team-section .image4 {
     height: 315px;
   }
 }
@@ -909,7 +952,10 @@ footer .parte2 .columna4 .submit-button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .team .team-section .image1, .team .team-section .image2, .team .team-section .image3, .team .team-section .image4 {
+  .team .team-section .image1,
+  .team .team-section .image2,
+  .team .team-section .image3,
+  .team .team-section .image4 {
     width: 400px;
     height: 400px;
     margin-bottom: 0.5em;
@@ -978,7 +1024,11 @@ footer .parte2 .columna4 .submit-button {
     display: inline-block;
     cursor: pointer;
   }
-  .testimonials #i1:checked ~ #one, .testimonials #i2:checked ~ #two, .testimonials #i3:checked ~ #three, .testimonials #i4:checked ~ #four, .testimonials #i5:checked ~ #five {
+  .testimonials #i1:checked ~ #one,
+  .testimonials #i2:checked ~ #two,
+  .testimonials #i3:checked ~ #three,
+  .testimonials #i4:checked ~ #four,
+  .testimonials #i5:checked ~ #five {
     display: block;
     z-index: 99;
   }
@@ -1053,7 +1103,11 @@ footer .parte2 .columna4 .submit-button {
     display: inline-block;
     cursor: pointer;
   }
-  .testimonials #i1:checked ~ #one, .testimonials #i2:checked ~ #two, .testimonials #i3:checked ~ #three, .testimonials #i4:checked ~ #four, .testimonials #i5:checked ~ #five {
+  .testimonials #i1:checked ~ #one,
+  .testimonials #i2:checked ~ #two,
+  .testimonials #i3:checked ~ #three,
+  .testimonials #i4:checked ~ #four,
+  .testimonials #i5:checked ~ #five {
     display: block;
     z-index: 99;
   }

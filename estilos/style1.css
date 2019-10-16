@@ -3,17 +3,25 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+} */
 
-body{
+.body{
     margin-left: 15%;
     margin-right: 10%;
     text-align: left;
-} */
+}
 
-#h3about, #h4about, #h2about {
+#h3about{
     font-family: "Montserrat", sans-serif;
     color: #283d50;
     text-align: center;
+    position: relative;
+}
+
+#h4about, #h2about {
+    font-family: "Montserrat", sans-serif;
+    color: #283d50;
+    text-align: left;
     position: relative;
 }
 
@@ -74,6 +82,11 @@ body{
     background: #007bff;
 }
 
+.box i:hover{
+    color:#fff;
+}
+
+
 .h4p{
     margin-top: -90px;
     margin-left: 80px;
@@ -98,8 +111,7 @@ body{
 }
 
 .teach{
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: 400px;
 }
 
 #teach1 {
@@ -124,7 +136,7 @@ body{
 
 /*-- Services Section--*/
 
-.service{
+.service {
     text-align: center;
     padding: 60px 0 40px 0;
     box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
@@ -149,18 +161,18 @@ body{
 .display{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-left: 350px;
 }
 
 .display > div{
     height: 120px;
     width: 350px;
+    padding: 30px;
     text-align: left;
-    padding: 50px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    margin: 0 10px 40px 10px;
+    margin: 0px 10px 40px 10px;
     background: #fff;
     box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
     transition: all 0.3s ease-in-out;
@@ -177,8 +189,7 @@ body{
     transform: translateY(-5px);
 }
 
-.display h3{
-    margin-left: -190px;
+#h3service h3{
     color: #111;
 }
 
@@ -200,12 +211,46 @@ body{
 # Responsive Media Queries
 --------------------------------------------------------------*/
 
-@media (min-width: 600px) {
-    
+@media (max-width: 600px) {
+    .body .service {
+      padding-bottom: 0.1em;
+    }
+    .body .service h3 {
+      margin-top: 0.1em;
+      margin-bottom: 0.1em;
+    }
+    .body .service .top {
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+    .body .service {
+      padding-left: 0.1em;
+      padding-right: 0.1em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+ }
+
 }
 
-
-
-@media ( max-width: 800px){
-
+@media (min-width: 601px) and (max-width: 800px) {
+    .body .service {
+      background-color: #ECF5FF;
+      text-align: center;
+      height: 450px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      -webkit-box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
+              box-shadow: 0 0 20px 0 rgba(194, 232, 247, 0.767) inset;
+      position: relative;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+} 
 }

@@ -476,12 +476,13 @@ nav {
 
     }
 
-    .contact-body>div {
+              .contact-body>div {
         flex: 1;
-    }
+             }
 
     .formulario {
         display: inline-block;
+        justify-content: center;
     }
 
     .info-row {
@@ -509,33 +510,33 @@ nav {
         margin: auto;
         width: 100%;
         padding: 0 0 10px 36px;
-        
+
     }
 
     .form {
-        display: flex;
         line-height: 1.5;
         width: 100%;
         padding: 12px;
         border-radius: 4px;
         box-sizing: border-box;
-        
+        display: inline-block;
     }
 
     .name-email {
         display: flex;
         flex-wrap: wrap;
-         margin: 12px;
+        margin: 12px;
         margin-right: 12px;
-     }
-     input[type=text], textarea{
-        width: 100%;
+    }
+
+    input[type=text], textarea {
+        width:100%;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
         resize: vertical;
-      }
+           }
 
     .form button[type="submit"] {
         background: #007bff;
@@ -544,6 +545,7 @@ nav {
         padding: 8px 30px;
         color: #fff;
         transition: 0.3s;
+        text-align: center;
 
     }
 
@@ -677,10 +679,6 @@ footer {
     @include displayFlex3;
     text-align: center;
 }
-
-
-
-
 
 /*------------------------------------------------------------------------
                             SECCIÓN RESPONSIVE
@@ -1071,6 +1069,11 @@ footer {
         }
     }
 }
+
+/*------------------------------------------------------------------------
+                            MEDIA QUERY TABLET FOR OUR CLIENTS
+-------------------------------------------------------------------------*/
+@media (max-width: 800px) {}
 
 /*------------------------------------------------------------------------
                             MEDIA QUERY TABLET FOR FOOTER

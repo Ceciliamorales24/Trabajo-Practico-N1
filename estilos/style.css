@@ -547,6 +547,9 @@ nav img {
 
 #contact .formulario {
   display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #contact .info-row {
@@ -582,15 +585,13 @@ nav img {
 }
 
 #contact .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   line-height: 1.5;
   width: 100%;
   padding: 12px;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: inline-block;
 }
 
 #contact .name-email {
@@ -621,6 +622,7 @@ nav img {
   color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  text-align: center;
 }
 
 #contact .form button[type="submit"]:hover {
@@ -1180,6 +1182,9 @@ footer .parte2 .columna4 .submit-button {
   }
 }
 
+/*------------------------------------------------------------------------
+                            MEDIA QUERY TABLET FOR OUR CLIENTS
+-------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------
                             MEDIA QUERY TABLET FOR FOOTER
 -------------------------------------------------------------------------*/

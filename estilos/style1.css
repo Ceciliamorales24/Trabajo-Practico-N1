@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 } */
 
-.body{
+.body-about{
     margin-left: 15%;
     margin-right: 10%;
     text-align: left;
@@ -191,6 +191,10 @@
 
 #h3service h3{
     color: #111;
+}
+
+#h2service {
+    text-align: center;
 }
 
 .display p{

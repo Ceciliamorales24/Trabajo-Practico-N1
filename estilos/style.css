@@ -19,6 +19,7 @@ body {
   color: #004289;
   background-color: #fff;
   height: 80px;
+  font-weight: 200;
 }
 
 .header .menu {
@@ -125,7 +126,7 @@ nav img {
 }
 
 .whyUs .card-container .card i {
-  color: #BFDDFE;
+  color: #ECF5FF;
   font-size: 48px;
 }
 
@@ -151,7 +152,7 @@ nav img {
   font-size: 15px;
   font-weight: 400;
   line-height: 22.5px;
-  color: #BFDDFE;
+  color: #ECF5FF;
   margin-bottom: 1em;
 }
 
@@ -210,7 +211,7 @@ nav img {
 
 .whyUs .numbers .stats .element {
   font-size: 15px;
-  color: #BFDDFE;
+  color: #ECF5FF;
   margin: 0;
 }
 
@@ -452,16 +453,18 @@ nav img {
                             SECCIÓN OUR CLIENTS
 -------------------------------------------------------------------------*/
 .our {
-  background-color: #BFDDFE;
+  background-color: #ECF5FF;
   text-align: center;
   padding-top: 10px;
+  -webkit-box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 .style-h3 {
   font-size: 36px;
   color: #283d50;
   text-align: center;
-  font-weight: 500;
+  font-weight: 800;
   position: relative;
 }
 
@@ -475,7 +478,7 @@ nav img {
 }
 
 .clientslog {
-  padding: 64px 0;
+  padding: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,7 +496,7 @@ nav img {
 }
 
 .clientslog .logo-cliente {
-  padding: 40px;
+  padding: 45px;
   -ms-flex-preferred-size: 18%;
       flex-basis: 18%;
   border: 1px solid #d6eaff;
@@ -502,7 +505,12 @@ nav img {
 
 .clientslog .logo-cliente img {
   max-width: 100%;
-  max-height: 64px;
+  max-height: 48px;
+}
+
+.clientslog .logo-cliente .logo-cliente :hover {
+  max-width: 120%;
+  background-color: red;
 }
 
 /*------------------------------------------------------------------------
@@ -510,51 +518,60 @@ nav img {
 -------------------------------------------------------------------------*/
 .contact {
   background-color: #fff;
-  text-align: center;
+  overflow: hidden;
+  padding: 25px 50px 75px 100px;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.contact .style-h3 {
-  display: block;
+.contact-header {
+  padding-bottom: 30px;
+}
+
+.style-h3 {
   width: 100%;
 }
 
-.contact .contact-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.contact-body {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.contact .contact-body .col-cont-bdy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.p-contact {
+  font-size: 14px;
+  line-height: 24px;
+  color: #888;
+  text-align: center;
+  margin: auto;
+  width: 50%;
 }
 
-.contact .contact-body .col-cont-bdy .map {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  /*overflow: hidden;*/
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.info-col i {
+  font-size: 32px;
+  color: #007bff;
+  float: left;
+  line-height: 1;
+}
+
+.form button[type="submit"] {
+  background: #007bff;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 30px;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form button[type="submit"]:hover {
+  background: #0067d5;
+  cursor: pointer;
 }
 
 /*------------------------------------------------------------------------
@@ -795,7 +812,7 @@ footer .parte2 .columna4 .submit-button {
   .whyUs .card-container .card .body p {
     font-size: 15px;
     font-weight: 400;
-    color: #BFDDFE;
+    color: #ECF5FF;
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -847,7 +864,7 @@ footer .parte2 .columna4 .submit-button {
   }
   .whyUs .numbers .stats .element {
     font-size: 15px;
-    color: #BFDDFE;
+    color: #ECF5FF;
     margin: 0;
   }
 }
@@ -1172,7 +1189,8 @@ footer .parte2 .columna4 .submit-button {
         -ms-flex: 1;
             flex: 1;
   }
-  footer .parte2 .columna4 input, footer .parte2 .columna4 .submit-button {
+  footer .parte2 .columna4 input,
+  footer .parte2 .columna4 .submit-button {
     height: 33px;
   }
   .copyright {

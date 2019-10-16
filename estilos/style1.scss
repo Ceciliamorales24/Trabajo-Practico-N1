@@ -1,0 +1,206 @@
+.body-about {
+    margin-left: 15%;
+    margin-right: 10%;
+    text-align: left;
+}
+
+#h3about {
+    font-family: "Montserrat", sans-serif;
+    color: #283d50;
+    text-align: center;
+    position: relative;
+}
+
+#h4about,
+#h2about {
+    font-family: "Montserrat", sans-serif;
+    color: #283d50;
+    text-align: left;
+    position: relative;
+}
+
+#pabout {
+    font-family: 'Montserrat', sans-serif;
+    color: #283d50;
+}
+
+.about {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #556877;
+    width: 50%;
+}
+
+.about>h3 {
+    font-size: 36px;
+    color: #283d50;
+    text-align: center;
+    font-weight: 500px;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    text-align: left;
+    line-height: 1.5;
+}
+
+#texto {
+    margin-left: -10px;
+    text-align: left;
+    color: #444;
+    font-family: "Open Sans", sans-serif;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+.box {
+    background: #fff;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+
+.box :hover {
+    background: #007bff;
+}
+
+.box i:hover {
+    color: #fff;
+}
+
+
+.h4p {
+    margin-top: -90px;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.h4p>h4 {
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.h4p>p {
+
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.teamAbout,
+.teach,
+.design {
+    display: flex;
+}
+
+.teach {
+    font-weight: 400px;
+}
+
+#teach1 {
+    margin-top: -100px;
+}
+
+#teach1>h3 {
+    font-weight: 600px;
+    font-size: 36px;
+}
+
+.design>h2 {
+    font-weight: 600px;
+    font-size: 36px;
+
+}
+
+.imagen {
+    width: 540px;
+    height: 540px;
+}
+
+/*-- Services Section--*/
+
+.service {
+    text-align: center;
+    padding: 60px 0 40px 0;
+    box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    background: #ecf5ff;
+}
+
+.service>h2 {
+    font-size: 36px;
+    font-weight: 600px;
+}
+
+.service>p {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #556877;
+    width: 50%;
+}
+
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 350px;
+}
+
+.display>div {
+    height: 120px;
+    width: 350px;
+    padding: 30px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0px 10px 40px 10px;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+
+}
+
+#descripcion {
+    color: #444;
+    font-family: "Open Sans", sans-serif;
+}
+
+.display :hover {
+    color: #007bff;
+    transform: translateY(-5px);
+}
+
+#h3service h3 {
+    color: #111;
+}
+
+#h2service {
+    text-align: center;
+}
+
+.display p {
+    margin-left: 15px;
+}
+
+#icon {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -15px;
+    top: calc(50% - 32px);
+}

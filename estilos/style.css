@@ -519,7 +519,7 @@ nav img {
 #contact {
   background-color: #fff;
   overflow: hidden;
-  padding: 60px 0;
+  padding: 40px 0;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
@@ -545,6 +545,10 @@ nav img {
           flex: 1;
 }
 
+#contact .formulario {
+  display: inline-block;
+}
+
 #contact .info-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -555,33 +559,38 @@ nav img {
 }
 
 #contact .info-row1 {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-right: -15px;
-  margin-left: -15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
-#contact .p-contact {
-  font-size: 14px;
-  color: #888;
-  text-align: center;
-  margin: auto;
-  width: 50%;
-  padding: 0 0 10px 36px;
-  line-height: 28px;
-}
-
-#contact .info-col i {
+#contact .info-row1 i {
   font-size: 32px;
   color: #007bff;
   float: left;
   line-height: 1;
 }
 
+#contact .pcontact {
+  font-size: 14px;
+  color: #888;
+  margin: auto;
+  width: 100%;
+  padding: 0 0 10px 36px;
+}
+
 #contact .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   line-height: 1.5;
-  border: saddlebrown;
-  /* display: flex;*/
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #contact .name-email {
@@ -590,8 +599,18 @@ nav img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
+  margin: 12px;
+  margin-right: 12px;
+}
+
+#contact input[type=text], #contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: vertical;
 }
 
 #contact .form button[type="submit"] {
@@ -612,19 +631,6 @@ nav img {
 /*------------------------------------------------------------------------
                             SECCIÓN FOOTER
 -------------------------------------------------------------------------*/
-/* - El div "wayne" deberia empezar un poco mas abajo, en sentido vertical, que los demas. 
-Un margin-top o un display: flex, flex-direction: column, justify-content: center, serian posibles soluciones
-- Si le quitamos el width de 40% al div de contact us, nos evitamos el problema de que los iconos se achiquen y pierdan la forma
-redonda al achicar la pantalla
-- El input esta un poco angosto. Yo haria que label fuera flex, y le daria al input type email flex 2, y al input submit flex 1 para que siempre
-ocupen el 100% del label y se vean mas anchos. Esto tambien soluciona el problema de que se pongan uno debajo del otro en algunas resoluciones. 
-- En resoluciones de entre 600 y 900px, las columnas 1 y 2, y las columnas 3 y 4, se ven muy juntas entre si. Quiza un margin en
-la media query pueda ser una solucion sencilla. En esa misma resolucion, hay muy poco aire en la caja en el bottom. Un padding 
-haria que se viera mucho mejor. 
-- Atencion a los iconos en resoluciones menores a 600px: no deberian ocupar el 100% del ancho, sino quedar ubicados a la izquierda
-- El CSS en general esta desordenado: es bueno escribirlo en el mismo orden que el HTML, asi es mas rapido ubicar donde se encuentra
-el estilo de un elemento en particular. 
-*/
 footer {
   color: #fff;
   width: 100%;

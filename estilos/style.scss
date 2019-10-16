@@ -457,87 +457,90 @@ nav {
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/
-
-.contact {
+#contact {
     background-color: $color2;
     overflow: hidden;
-    padding: 25px 50px 75px 100px;
+    padding: 60px 0;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-    display: flex;
 
-
-    .contact-header {
-    padding-bottom: 30px;
-}
-
-    .style-h3 {
-    width: 100%;
-}
 
     .contact-body {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+
+    .contact-body>div {
+        flex: 1;
+    }
 
     .info-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: 15px;
+    }
 
-    .form {
-    display: block;
-    line-height: 1.5;
-    border: saddlebrown;
-}
+    .info-row1 {
+        justify-content: space-around;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
 
     .p-contact {
-    font-size: 14px;
-    line-height: 24px;
-    color: #888;
-    text-align: center;
-    margin: auto;
-    width: 50%;
-}
+        font-size: 14px;
+         color: #888;
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        padding: 0 0 10px 36px;
+    line-height: 28px;
+   
+    }
 
     .info-col i {
-    font-size: 32px;
-    color: #007bff;
-    float: left;
-    line-height: 1;
-}
+        font-size: 32px;
+        color: #007bff;
+        float: left;
+        line-height: 1;
+    }
+
+    .form {
+        line-height: 1.5;
+        border: saddlebrown;
+       /* display: flex;*/
+    }
 
     .name-email {
-    display: flex;
-    /*flex-wrap: wrap;
-    margin-right: -5px;
-    margin-left: -5px;*/
-}
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
 
     .form button[type="submit"] {
-    background: #007bff;
-    border: 0;
-    border-radius: 20px;
-    padding: 8px 30px;
-    color: #fff;
-    transition: 0.3s;
-}
+        background: #007bff;
+        border: 0;
+        border-radius: 20px;
+        padding: 8px 30px;
+        color: #fff;
+        transition: 0.3s;
+    }
 
     .form button[type="submit"]:hover {
-    background: #0067d5;
-    cursor: pointer;
+        background: #0067d5;
+        cursor: pointer;
+    }
+
 }
 
 
 
-
-
-
-   }
 /*------------------------------------------------------------------------
                             SECCIÓN FOOTER
 -------------------------------------------------------------------------*/

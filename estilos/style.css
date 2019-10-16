@@ -501,41 +501,37 @@ nav img {
       flex-basis: 18%;
   border: 1px solid #d6eaff;
   background: #fff;
+  /*.logo-cliente :hover {
+            max-width: 120%;
+            background-color: red;
+        }*/
 }
 
 .clientslog .logo-cliente img {
   max-width: 100%;
   max-height: 48px;
-}
-
-.clientslog .logo-cliente .logo-cliente :hover {
-  max-width: 120%;
-  background-color: red;
+  /*transition: all 0.4s ease-in-out;*/
 }
 
 /*------------------------------------------------------------------------
                             SECCIÓN Contact us
 -------------------------------------------------------------------------*/
-.contact {
+#contact {
   background-color: #fff;
   overflow: hidden;
-  padding: 25px 50px 75px 100px;
+  padding: 60px 0;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+#contact .contact-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.contact-header {
-  padding-bottom: 30px;
-}
-
-.style-h3 {
-  width: 100%;
-}
-
-.contact-body {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -543,23 +539,62 @@ nav img {
   margin-left: auto;
 }
 
-.p-contact {
+#contact .contact-body > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#contact .info-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-left: 15px;
+}
+
+#contact .info-row1 {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#contact .p-contact {
   font-size: 14px;
-  line-height: 24px;
   color: #888;
   text-align: center;
   margin: auto;
   width: 50%;
+  padding: 0 0 10px 36px;
+  line-height: 28px;
 }
 
-.info-col i {
+#contact .info-col i {
   font-size: 32px;
   color: #007bff;
   float: left;
   line-height: 1;
 }
 
-.form button[type="submit"] {
+#contact .form {
+  line-height: 1.5;
+  border: saddlebrown;
+  /* display: flex;*/
+}
+
+#contact .name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+#contact .form button[type="submit"] {
   background: #007bff;
   border: 0;
   border-radius: 20px;
@@ -569,7 +604,7 @@ nav img {
   transition: 0.3s;
 }
 
-.form button[type="submit"]:hover {
+#contact .form button[type="submit"]:hover {
   background: #0067d5;
   cursor: pointer;
 }

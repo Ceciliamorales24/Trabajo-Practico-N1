@@ -1,0 +1,70 @@
+.primera-seccion {
+    color: $color2;
+    height: 550px;
+    background-color: $color-hero;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor1 {
+    width: 555px;
+    font-size: 35px;
+    display: inline-block;
+    box-sizing: border-box;
+
+    h2 {
+        margin: 0 0 20px 0;
+        line-height: 120%;
+        font-family: "Montserrat", sans-serif;
+        ;
+
+    }
+
+    .solutions {
+        text-decoration: underline;
+        color: $color-solutions;
+    }
+}
+
+
+.button-hero {
+    margin: 0px 20px 20px 0px;
+    padding: 10px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid $color-hero;
+    background-color: #007bff;
+    border-radius: 40px;
+    color: $color2;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover {
+        background-color: $color-hero;
+        border: 2px solid $color2;
+        transition: 0.5s;
+
+    }
+}
+
+.dos {
+    background-color: $color-hero;
+    border: 2px solid $color2;
+
+    &:hover {
+        background-color: #007bff;
+        border: none;
+        transition: 0.5s;
+    }
+}
+
+.contenedor-image {
+    width: 555px;
+    display: inline-block;
+}
+
+.image-hero {
+    height: 315px;
+}

@@ -1,0 +1,29 @@
+/*Titulo y botones*/
+.portfolio {}
+
+.center {
+    text-align: center;
+
+    h2 {
+        font-size: 35px;
+        font-weight: 500;
+        color: #283d50;
+    }
+}
+
+.botones-portfolio {
+    display: block;
+}
+
+.btn {
+    color: #007bff;
+    background-color: #ecf5ff;
+    border-radius: 50px;
+    padding: 5px;
+
+}
+
+.dos {
+    color: $color2;
+    background-color: #007bff;
+}

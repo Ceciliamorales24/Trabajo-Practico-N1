@@ -77,6 +77,33 @@
   height: 315px;
 }
 
+/*Titulo y botones*/
+.center {
+  text-align: center;
+}
+
+.center h2 {
+  font-size: 35px;
+  font-weight: 500;
+  color: #283d50;
+}
+
+.botones-portfolio {
+  display: block;
+}
+
+.btn {
+  color: #007bff;
+  background-color: #ecf5ff;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.dos {
+  color: #fff;
+  background-color: #007bff;
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Open Sans', sans-serif;
@@ -680,7 +707,8 @@ nav img {
   margin-right: 12px;
 }
 
-#contact input[type=text], #contact textarea {
+#contact input[type=text],
+#contact textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -1259,7 +1287,7 @@ footer .parte2 .columna4 .submit-button {
 }
 
 /*------------------------------------------------------------------------
-                            MEDIA QUERY TABLET FOR OUR CLIENTS
+                            MEDIA QUERY FOR OUR CLIENTS
 -------------------------------------------------------------------------*/
 @media (max-width: 800px) {
   .our {
@@ -1293,25 +1321,170 @@ footer .parte2 .columna4 .submit-button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 90%;
-    /* margin: 0 auto;*/
+    margin: 5px;
   }
-  .clientslog .logo-cliente {
+  .logo-cliente {
     padding: 35px;
     -ms-flex-preferred-size: 22%;
         flex-basis: 22%;
     border: 1px solid #d6eaff;
     background: #fff;
   }
-  .clientslog .logo-cliente img {
+  img {
     max-width: 100%;
     max-height: 50px;
   }
 }
 
+@media (max-width: 600px) {
+  .our {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    -webkit-box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  .style-h3 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .pclients {
+    font-size: 15px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .clientslog {
+    padding: 0px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    margin: 5px;
+  }
+  .logo-cliente {
+    padding: 90px;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    border: 1px solid #d6eaff;
+    background: #fff;
+  }
+  img {
+    max-width: 100%;
+    max-height: 70px;
+  }
+}
+
 /*------------------------------------------------------------------------
+                            MEDIA QUERY FOR CONTACT
+-------------------------------------------------------------------------*/
+@media (max-width: 800px) {
+  #contact {
+    overflow: hidden;
+    padding: 40px 0;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    /*  .contact-body>div {
+            flex: 1;
+        }*/
+  }
+  #contact .contact-body {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #contact .formulario {
+    /*
+            display: inline-block;
+            justify-content: center;
+        }*/
+  }
+  #contact .formulario .info-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-left: 15px;
+  }
+  #contact .formulario .info-row1 {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  #contact .formulario .info-row1 i {
+    font-size: 32px;
+    color: #007bff;
+    float: left;
+    line-height: 1;
+  }
+  #contact .formulario .pcontact {
+    font-size: 14px;
+    color: #888;
+    margin: auto;
+    width: 100%;
+    padding: 0 0 10px 36px;
+  }
+  #contact .formulario .form {
+    line-height: 1.5;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: inline-block;
+  }
+  #contact .formulario .name-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 12px;
+    margin-right: 12px;
+  }
+  #contact .formulario input[type=text],
+  #contact .formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    resize: vertical;
+  }
+  #contact .formulario .form button[type="submit"] {
+    background: #007bff;
+    border: 0;
+    border-radius: 20px;
+    padding: 8px 30px;
+    color: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+  }
+  #contact .formulario .form button[type="submit"]:hover {
+    background: #0067d5;
+    cursor: pointer;
+  }
+  /*------------------------------------------------------------------------
                             MEDIA QUERY TABLET FOR FOOTER
 -------------------------------------------------------------------------*/
-@media (min-width: 601px) and (max-width: 800px) {
+}
+
+@media (max-width: 800px) and (min-width: 601px) and (max-width: 800px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1367,10 +1540,13 @@ footer .parte2 .columna4 .submit-button {
   }
 }
 
-/*------------------------------------------------------------------------
+@media (max-width: 800px) {
+  /*------------------------------------------------------------------------
                             MEDIA QUERY CEL FOR FOOTER
 -------------------------------------------------------------------------*/
-@media (max-width: 600px) {
+}
+
+@media (max-width: 800px) and (max-width: 600px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;

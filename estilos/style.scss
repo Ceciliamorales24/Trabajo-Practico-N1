@@ -477,9 +477,9 @@ nav {
 
     }
 
-              .contact-body>div {
+    .contact-body>div {
         flex: 1;
-             }
+    }
 
     .formulario {
         display: inline-block;
@@ -530,14 +530,15 @@ nav {
         margin-right: 12px;
     }
 
-    input[type=text], textarea {
-        width:100%;
+    input[type=text],
+    textarea {
+        width: 100%;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
         resize: vertical;
-           }
+    }
 
     .form button[type="submit"] {
         background: #007bff;
@@ -1074,7 +1075,95 @@ footer {
 /*------------------------------------------------------------------------
                             MEDIA QUERY TABLET FOR OUR CLIENTS
 -------------------------------------------------------------------------*/
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+    .our {
+        text-align: center;
+        padding-top: 10px;
+        box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .style-h3 {
+        font-size: $letraH3;
+        text-align: center;
+    }
+
+    .pclients {
+        font-size: $letraPar;
+        text-align: center;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .clientslog {
+        padding: 0px 0;
+        @include displayFlex3;
+        overflow: hidden;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 5px
+    }
+
+    .logo-cliente {
+        padding: 35px;
+        flex-basis: 22%;
+        border: 1px solid #d6eaff;
+        background: $color2;
+    }
+
+
+    img {
+        max-width: 100%;
+        max-height: 50px;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .our {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    .style-h3 {
+        font-size: $letraH3;
+        text-align: center;
+    }
+
+    .pclients {
+        font-size: $letraPar;
+        text-align: center;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .clientslog {
+        padding: 0px 0;
+        @include displayFlex4;
+        overflow: hidden;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 5px
+    }
+
+    .logo-cliente {
+        padding: 90px;
+        flex-basis: 40%;
+        border: 1px solid #d6eaff;
+        background: $color2;
+    }
+
+
+    img {
+        max-width: 100%;
+        max-height: 70px;
+    }
+
+
+}
 
 /*------------------------------------------------------------------------
                             MEDIA QUERY TABLET FOR FOOTER

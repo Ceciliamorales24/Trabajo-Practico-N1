@@ -1261,6 +1261,53 @@ footer .parte2 .columna4 .submit-button {
 /*------------------------------------------------------------------------
                             MEDIA QUERY TABLET FOR OUR CLIENTS
 -------------------------------------------------------------------------*/
+@media (max-width: 800px) {
+  .our {
+    text-align: center;
+    padding-top: 10px;
+    -webkit-box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  }
+  .style-h3 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .pclients {
+    font-size: 15px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .clientslog {
+    padding: 0px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    /* margin: 0 auto;*/
+  }
+  .clientslog .logo-cliente {
+    padding: 35px;
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
+    border: 1px solid #d6eaff;
+    background: #fff;
+  }
+  .clientslog .logo-cliente img {
+    max-width: 100%;
+    max-height: 50px;
+  }
+}
+
 /*------------------------------------------------------------------------
                             MEDIA QUERY TABLET FOR FOOTER
 -------------------------------------------------------------------------*/

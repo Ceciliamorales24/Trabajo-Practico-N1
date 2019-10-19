@@ -16,6 +16,7 @@
     font-family: "Montserrat", sans-serif;
     color: #283d50;
     text-align: left;
+    // No veo la necesidad de este position: relative 
     position: relative;
 }
 
@@ -71,7 +72,7 @@
     border-radius: 50%;
     border: 2px solid #007bff;
 }
-
+// Este hover nunca llega a aplicarse porque hay un espacio entre la palabra .box y el :hover. 
 .box :hover {
     background: #007bff;
 }
@@ -179,7 +180,12 @@
     color: #444;
     font-family: "Open Sans", sans-serif;
 }
-
+// este hover no se aplica por el espacio entre display y hover
+// y es bueno que no se aplique, porque display es la seccion contenedora. 
+// De aplicarse, todas las tarjetas subirian 15 px a la vez. 
+// El problema es que css lo interpreta como "todos los elementos que tengan hover adentro de display"
+// y eso tiene como consecuencia de que cuando le hacemos hover al icono, este se mueve
+// Mi recomendacion es que borren este selector directamente y lo reemplacen por un hover en cada card 
 .display :hover {
     color: #007bff;
     transform: translateY(-5px);

@@ -1,3 +1,23 @@
+<!-- Observaciones generales TP:
+
+1. Buen codigo de HTML en general. Buen uso de etiquetas semanticas, nombres de
+clases, organizacion general. 
+2. Entiendo que por falta de tiempo no se llego a hacer el menu en mobile, pero 
+habria estado bueno que funcionaran los links a distintas secciones de la pagina. 
+3. Los archivos no estan tan bien organizados - para futuros desarrollos les 
+recomiendo tomarse un tiempo para unificar los distintos archivos scss 
+(los partials estan muy bien, hablo de los archivos style.scss y style1.scss - 
+simplifican mucho ir a buscar un estilo en particular)
+
+En general el trabajo es excelente y estoy muy satisfecha con el trabajo que hicieron. 
+
+Dejo distintas observaciones a lo largo del codigo. A veces seran correcciones, 
+otras meras observaciones para seguir aprendiendo. No espero que hayan sabido 
+todo lo que les comento, pero aprovecharlo a futuro. 
+
+ -->
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,6 +43,8 @@
 
     <header class="header">
         <nav>
+            <!-- Aqui deberia ir un alt explicitando que se trata del logo de la pagina. 
+            Recuerden que el alt es muy importante para los lectores de pantalla.  -->
             <img src="img/logo-tp.png">
             <ul class="menu">
                 <li><a href="#">Home</a></li>
@@ -51,6 +73,10 @@
 
         </div>
         <div class="contenedor-image">
+            <!-- El alt debe ser descriptivo, debe ser un texto que reemplaza 
+            la imagen para aquellas personas que no la pueden ver. 
+            "Imagen del hero" no es descriptiva. Una mejor opcion seria por 
+            ejemplo "grupo de personas trabajando en una web".  -->
             <img class="image-hero" src="img/intro-img.svg" alt="imagen del hero">
         </div>
     </article>
@@ -63,6 +89,10 @@
 
         <div class="about">
             <h3 id="h3about">About Us</h3>
+
+            <!-- Si bien html ignora los espacios en el codigo, quien lee su 
+                codigo no. Es buena idea tomarse el trabajo de eliminar
+            los saltos de linea en los textos que siguen para simplificar la lectura.  -->
             <p id="pabout">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et
                 dolore
@@ -115,6 +145,8 @@
 
             </div>
 
+            <!-- El alt debe ir en la imagen, no en el div que la contiene. 
+        Si esta en el div, un lector de pantalla no va a saber de que se trata  -->
             <div class="teamAbout" alt="imagen del equipo">
                 <img class="imagen" src="img/about-img.svg">
 
@@ -124,6 +156,7 @@
 
 
         <div class="teach">
+            <!-- Este es un buen alt, pero recuerden que va en la imagen y no en el div -->
             <div id="teach1" alt="imagen de profesora">
                 <img class="imagen" src="img/about-extra-1.svg">
             </div>
@@ -198,6 +231,10 @@
                 </div>
 
                 <div>
+                    <!-- En esta seccion hay varios elementos con el mismo ID - 
+                    si bien html lo permite, el ID debe utilizarse como un identificador 
+                    unico, para un solo elemento. En este caso era mas apropiado
+                    usar una clase.  -->
                     <h3 id="h3service">Dolor Sitema</h3>
                     <p id="pabout" id="descripcion">
                         Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
@@ -263,6 +300,10 @@
 ------------------------------------------------------------------------->
 
     <div class="whyUs">
+        <!-- Nuavemente, en esta seccion hay varios elementos con el mismo id. 
+        Evitenlo en el futuro. Cuando usemos javascript va a quedar mas claro por que 
+        (basicamente, en javascript usamos el id para seleccionar un
+        elemento en particular) -->
         <h3>Why choose us?</h3>
         <p class="top">Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant
             vituperatoribus.</p>
@@ -297,6 +338,10 @@
         </section>
 
         <section class="numbers">
+            <!-- Recuerden que si necesitamos que un elemento tenga dos estilos, no necesitamos
+            ponerle un id y una clase. Podemos ponerle dos clases, separandolas con un espacio. 
+            Por ejemplo <div class="arriba stats">. A ese elemento se le aplicaran los estilos de ambas clases.  -->
+
             <div id="arriba" class="stats">
                 <p class="title">274</p>
                 <p class="element">Clients</p>
@@ -319,7 +364,10 @@
     <!-----------------------------------------------------------------------
                             SECCIÓN PORTFOLIO
        ------------------------------------------------------------------------->
-<section class="portfolio">
+
+<!-- Asumo que esta seccion esta incompleta - no voy a corregirla. 
+    Cuando este pueden enviarmela asi la veo -->
+       <section class="portfolio">
     <article class="center">
         <h2>Our Portfolio</h2>
         <div class="botones-portfolio">
@@ -445,7 +493,9 @@
     <!------------------------------------------------------------------------
                         SECCIÓN TESTIMONIALS
    ------------------------------------------------------------------------->
-    <div class="testimonials">
+   <!-- Increible como quedó esta sección - felicitaciones -->
+
+   <div class="testimonials">
         <h3>Testimonials</h3>
 
         <input type="radio" name="images" id="i1" checked />
@@ -490,7 +540,8 @@
     <!------------------------------------------------------------------------
                         SECCIÓN TEAM
 ------------------------------------------------------------------------->
-    <div class="team">
+<!-- Excelente trabajo en esta sección   -->
+<div class="team">
         <h3>Team</h3>
         <p class="top">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
 
@@ -590,7 +641,8 @@
     <!-----------------------------------------------------------------------
                         SECCIÓN OUR CLIENTS
    ------------------------------------------------------------------------->
-    <div class="our">
+   <!-- Habria sido bueno agregar las animaciones de cada imagen en esta seccion  -->
+   <div class="our">
         <h3 class="style-h3">Our Clients</h3>
         <p class="pclients">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>doloremque
             dere santome nida.</p>
@@ -638,6 +690,7 @@
                         <p class="pcontact">+1 5589 55488 55</p>
                     </div>
                 </div>
+                <!-- Excelente el codigo del formulario -->
                 <div class="form">
                     <form action="contacto" method="post">
                         <div class="name-email">
@@ -649,6 +702,10 @@
                             </div>
                         </div>
                         <div class="form1">
+                            <!-- Por que todos los demas input quedan con estilo y este no?
+                            Porque en CSS pusieron estilo a todos los input[type=text]
+                            Y en este input se olvidaron de poner type="text" (escribieron class="text")
+                            Ojo con esos errores, que son muy dificiles de encontrar y con consecuencias grandes -->
                             <input class="text" name="Subject" id="Subject" placeholder="Subject">
                         </div>
                         <div class="form1">

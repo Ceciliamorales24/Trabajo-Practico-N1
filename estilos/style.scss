@@ -1,17 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+// variables y mixins son un buen import, ya que es codigo que se ira repitiendo a lo largo de 
+// todo nuestro archivo. 
+// La estrategia de separar hero y portfolio, en cambio, es confusa. 
+// Es perfectamente valido separar el codigo de distintas secciones, pero en ese caso
+// esperamos algun tipo de consistencia: o todas las secciones se encuentran en archivos
+// separados, o todas se encuentran en el mismo. 
+// Piensen en la persona que va a leer -y quiza modificar- su codigo sin haberlo visto nunca antes. 
+// Va a encontrar rapidamente lo que busca? Esa es la pregunta que nos debemos hacer 
+// - al menos si queremos mantener felices a los colegas :D 
 @import "_variables";
 @import "_mixins";
 @import "_hero";
 @import "_portfolio";
 
 * {
+    // Si "todos" los elementos tienen dos fuentes, la que gana es la que esta mas abajo:
+    // Open Sans. Es decir, ningun elemento tendra Montserrat a menos que ustedes lo 
+    // aclaren especificamente en ese elemento. 
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    // El body no trae padding por defecto, asi que esta aclaracion es innecesaria. 
     padding: 0;
     margin: 0;
 }
@@ -22,6 +35,11 @@ body {
 -------------------------------------------------------------------------*/
 
 .header {
+    // "color azul" no es un buen nombre de variable
+    // Recuerden mi anecdota siendo comprados por Naranja -
+    // los colores pueden cambiar, por eso los nombres deben aludir
+    // a su funcion y no a su color.  
+
     color: $color-azul;
     background-color: $color2;
     height: 80px;
@@ -31,6 +49,9 @@ body {
         list-style-type: none;
         padding: 0;
         margin: 0;
+        // Buen uso de los comentarios en el codigo! Es buena idea comentar todo lo que 
+        // puede no quedar claro para los demas. 
+
         /*Flex a los elementos li, para que se ubiquen uno al lado del otro y sean flexibles. Pero tambien le tengo que decir display flex a mi nav , para que la img que está conenida por nav se alinea tambien junto con las listas*/
         display: flex;
 
@@ -45,6 +66,11 @@ body {
             la medida estandar utilizada es de 500, la cual se 
             le aplica por defecto */
 
+
+            // Me confunde este comentario porque mas abajo tenemos la misma indicacion del color azul
+            // en los a, y si se esta aplicando. 
+            // Quiza lo hayan corregido despues de hacer este comentario? En ese caso 
+            // es buena idea borrar los comentarios. 
 
             /*a:visited {
                     color: $color-azul; 
@@ -88,6 +114,7 @@ nav {
                             SECCIÓN WHY CHOOSE US
 -------------------------------------------------------------------------*/
 .whyUs {
+    // buen uso de variables y mixins en esta seccion 
     background-color: $color1;
     color: $color2;
     text-align: center;
@@ -197,6 +224,13 @@ nav {
 /*------------------------------------------------------------------------
                             SECCIÓN TESTIMONIALS
 -------------------------------------------------------------------------*/
+// 
+// Estoy fascinada con esta seccion. 
+// Asumo que investigaron bastante para que quedara tan bien - felicitaciones
+
+// Lo unico que no entiendo es el archivo testimonials - primero lo hicieron por separado y despues
+// lo integraron aqui? En ese caso habria que borrar ese archivo 
+
 .testimonials {
     background-color: #ECF5FF;
     text-align: center;
@@ -446,6 +480,9 @@ nav {
             /*transition: all 0.4s ease-in-out;*/
         }
 
+        // No es buena idea dejar codigo comentado, a menos que se trate de un trabajo en progreso. 
+        // Confunde mucho a quien lo lee
+
         /*.logo-cliente :hover {
             max-width: 120%;
             background-color: red;
@@ -468,6 +505,7 @@ nav {
 
     .contact-body {
         display: flex;
+        // este es el wrap por defecto de flex - no es necesario aclararlo. 
         flex-wrap: nowrap;
         justify-content: space-around;
         width: 100%;
@@ -498,7 +536,8 @@ nav {
         margin-right: 15px;
         margin-left: 15px;
     }
-
+// esta i podria haberse metido "adentro" de las llaves de info-row1, aprovechando la
+// anidacion de selectores que nos da sass 
     .info-row1 i {
         font-size: 32px;
         color: #007bff;
@@ -683,6 +722,11 @@ footer {
     text-align: center;
 }
 
+// Hay mas medias queries de las necesarias - no deberian ser mas de dos, una para celulares
+// y otra para tablets. 
+// Para proximos desarrollos tomense el trabajo de integrar las media queries que haya escrito
+// cada una en una misma - simplifica mucho la lectura y el mantenimiento del codigo. 
+
 /*------------------------------------------------------------------------
                             SECCIÓN RESPONSIVE
 -------------------------------------------------------------------------*/
@@ -773,6 +817,7 @@ footer {
     }
 }
 
+// siempre la media query para una resolucion mas grande va antes que la media para la resolucion mas chica 
 @media (max-width: 800px) {
     .whyUs .numbers {
         padding: $padding4 10%;

@@ -50,10 +50,16 @@
 }
 
 .dos {
+    // este background color esta de mas: si lo sacamos, ya la web se asemeja al modelo
     background-color: $color-hero;
     border: 2px solid $color2;
 
     &:hover {
+        // por que cuando le hacemos hover a este boton, el texto se mueve? Porque en su estilo habitual
+        // tiene un border, y en el hover no lo tiene, asi que su ancho cambia. 
+        // Una solucion rapida es agregarle un border del mismo color que el fondo
+        // Asi:
+        // border: 2px solid #007bff
         background-color: #007bff;
         border: none;
         transition: 0.5s;
